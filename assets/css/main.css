@@ -505,6 +505,14 @@ input[type="search"] {
   width: 100%;
 }
 
+.img-inline {
+  display: inline-block;
+}
+
+.ver-top {
+  vertical-align: top;
+}
+
 @media print {
   * {
     background: transparent !important;
@@ -806,7 +814,19 @@ table {
 }
 
 .btn--big {
-  padding: 20px 60px;
+  padding: 10px 40px;
+}
+
+.btn--yellow {
+  background: #ffcf00;
+  color: #555555;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.btn--round {
+  -webkit-border-radius: 4px;
+          border-radius: 4px;
 }
 
 /*! Baze Grid v2.0.2 | (c) 2014 @_bobbylie | https://github.com/ImBobby/Baze-Grid */
@@ -1157,6 +1177,18 @@ input[type="number"] {
   width: 100%;
 }
 
+.form-input--pink {
+  background: #fffff4;
+  border: 1px solid #bbbbbb;
+}
+
+.form__footer {
+  border-top: 1px solid #d5d5d5;
+  padding: 20px;
+  background: #fffff4;
+  text-align: right;
+}
+
 /*ul*/
 .breadcrumb {
   display: none;
@@ -1429,6 +1461,12 @@ input[type="number"] {
 .nav {
   display: block;
   width: 100%;
+}
+
+@media screen and (max-width: 50em) {
+  .nav {
+    display: block !important;
+  }
 }
 
 @media screen and (min-width: 60em) {
@@ -4419,9 +4457,90 @@ a:hover, a:focus {
   padding-left: 10px;
 }
 
-.register__footer {
-  border-top: 1px solid #d5d5d5;
-  padding: 20px;
+.kontak-form {
+  background: white;
+  margin: 0 0 40px 0;
+}
+
+@media screen and (min-width: 60em) {
+  .kontak-form {
+    margin: 0 20px 20px 0;
+  }
+}
+
+.kontak-form__inputs {
+  padding: 20px 30px;
+}
+
+.sitemap {
+  margin-top: 50px;
+  margin-left: 20px;
+  display: inline-block;
+}
+
+.sitemap__icon {
+  margin-top: 20px;
+}
+
+.sitemap li {
+  list-style: none;
+  color: #6f6f6f;
+}
+
+.sitemap li a {
+  color: #6f6f6f;
+}
+
+.sitemap li a:hover {
+  color: #0074ba;
+}
+
+.sitemap__category {
+  padding-left: 75px;
+  padding-bottom: 30px;
+}
+
+.sitemap__category:before {
+  content: '';
+  position: absolute;
+  margin-left: -75px;
+  width: 75px;
+  border-top: 1px solid #a2a2a2;
+}
+
+.sitemap__category:first-child {
+  border-left: 1px solid #a2a2a2;
+}
+
+.sitemap__category__title {
+  position: relative;
+  top: -12px;
+  background: white;
+  border-left: 5px solid #ffcf00;
+  padding: 10px 20px;
+  margin-top: -20px;
+}
+
+.sitemap__category__menu > li:before {
+  content: '';
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background: url("../img/arrow.png") white;
+  background-repeat: no-repeat;
+  background-position: center center;
+  margin: 2px 0 0 -30px;
+  border: 1px solid #d5d5d5;
+}
+
+.sitemap__category__submenu li:before {
+  content: '';
+  position: absolute;
+  width: 10px;
+  height: 40px;
+  background: url("../img/arrow.png");
+  background-repeat: no-repeat;
+  margin: 5px 0 0 -20px;
 }
 
 .nav__footer {

@@ -83,3 +83,15 @@ input[type="number"] {
 .form-input--block {
     width: 100%;
 }
+
+.form-input--pink {
+    background: $pink;
+    border: 1px solid $black40;
+}
+
+.form__footer {
+    border-top: 1px solid $black30;
+    padding: 20px;
+    background: $pink;
+    text-align: right;
+}

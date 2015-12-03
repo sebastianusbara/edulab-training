@@ -1,6 +1,10 @@
 .nav {
 	display: block;
 	width: 100%;
+	
+	@media #{$medium_max} {
+		display: block!important;
+	}
 
     @media #{$large} {
     	max-width: 17%;
