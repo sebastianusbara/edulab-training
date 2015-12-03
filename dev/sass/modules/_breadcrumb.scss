@@ -1,0 +1,51 @@
+
+// http://goo.gl/E1YNsD
+
+// Config
+// ------------------------------------------------------------------------ //
+
+$bread_space        : ($space / 2);
+$bread_separator    : '>';
+
+
+// Style
+// ------------------------------------------------------------------------ //
+
+/*ul*/.breadcrumb {
+        display: none;
+        padding: 0;
+        list-style: none;
+        margin: 0;
+        margin-bottom: 10px;
+    
+    @media #{$large} {
+        display: block;
+    }
+    
+    &:after {
+        display: table;
+        clear: both;
+        content: '';
+    }
+    
+    > li {
+        position: relative;
+        float: left;
+        color: $black70;
+
+        &:before {
+            margin: 0 $bread_space;
+            color: #444;
+            content: $bread_separator;
+        }
+
+        &:first-child:before {
+            display: none;
+        }
+    }
+
+    a {
+        color: $black70;   
+    }
+
+}

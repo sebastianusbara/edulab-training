@@ -1,0 +1,62 @@
+.box {
+	background: white;
+}
+
+.box__content {
+	margin: 0;
+}
+
+.box__content img {
+	width: 100%;
+}
+
+.box__desc {
+	padding: 5px 10px;
+	font-size: 14px;
+}
+
+.box__desc a {
+	color: $black;
+}
+
+.box__subtitle {
+	margin-bottom: 5px;
+}
+
+.box--card {
+	margin: 20px 10px 20px 0;
+	border: 1px $black30 solid;
+	padding: 0;
+}
+
+.box--wide {
+	width: 100%;
+	margin: 10px 0;
+	position: relative;
+}
+
+.box--wide .box__desc {
+	font-size: 12px;
+	background-color: rgba(255, 255, 255, 0.8);
+	position: absolute;
+	bottom: 0;
+	z-index: 1;
+	width: 100%;
+	padding: 5px 10px 10px 10px;
+}
+
+.social {
+	padding: 10px 0;
+	border-top: 1px $black30 solid;
+	border-bottom: 1px $black30 solid;
+}
+
+.social__item {
+	position: absolute;
+	left: 0;
+	width: 33.33%;
+	height: 30px;
+	margin: 0;
+	border-right: 1px $black30 solid;
+	text-align: center;
+}

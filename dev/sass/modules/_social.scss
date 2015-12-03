@@ -1,0 +1,60 @@
+.social-list {
+	padding: 0 0 20px 15px;
+	margin-top: 10px;
+	display: none;
+	font-weight: 600;
+	color: $black80;
+	border-bottom: 1px solid $black60;
+	font-size: 13px;
+	@media #{$large}{
+		display: block;
+	}
+}
+
+.social-list span {
+	color: white;
+   	position: absolute;
+    top: 45%;  
+    left: 45%;
+    transform: translate(-45%, -45%);
+}
+
+.social-icon {
+	padding: 0;
+	margin: 0;
+}
+
+.social-icon li {
+	position: relative;
+	border: none;
+}
+
+.social-icon__list {
+	display: inline-block;
+	margin-right: 5px;
+	a {
+		height: 30px;
+		width: 30px;
+		display: inline-block;
+		vertical-align: middle;
+		&:hover {
+			background: $black;
+		}
+	}
+}
+
+.fb-icon {
+	background: #3b5998;
+}
+
+.tw-icon {
+	background: #55acee;
+}
+
+.yt-icon {
+	background: #e52d27;
+}
+
+.ig-icon {
+	background: #3f729b;
+}
