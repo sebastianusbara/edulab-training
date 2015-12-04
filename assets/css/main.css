@@ -1832,33 +1832,42 @@ input[type="number"] {
   opacity: 0.6;
 }
 
-.belajar__slider .slick-next {
-  position: absolute;
-  z-index: 1;
-  right: 0;
-  top: 35%;
-}
-
-.slider {
+.post__slider {
   position: relative;
+  margin-bottom: 20px;
 }
 
 .belajar__slider__nav {
   position: absolute;
-  z-index: 1;
+  z-index: 5;
   top: 45%;
+  width: 100%;
+}
+
+.belajar__slider__nav .slick-arrow {
+  width: 30px;
+  opacity: 0.6;
+  color: #ffcf00;
+  background: #222;
+  -webkit-border-radius: 100%;
+          border-radius: 100%;
+  border: 2px solid #ffcf00;
+  margin: 0 20px;
+  font-size: 25px;
+  z-index: 2;
 }
 
 .belajar__slider__nav .prev {
-  position: relative;
+  position: absolute;
   left: 0;
   top: 0;
 }
 
 .belajar__slider__nav .next {
-  position: relative;
-  float: right;
+  position: absolute;
+  right: 0;
   top: 0;
+  z-index: 2;
 }
 
 /*!
@@ -4388,17 +4397,42 @@ a:hover, a:focus {
 }
 
 .post__tabs {
+  width: 100%;
+  position: relative;
   padding: 0;
   margin-top: 20px;
+  z-index: 1;
+}
+
+.post__tabs:after {
+  display: none;
+}
+
+@media screen and (min-width: 48em) {
+  .post__tabs:after {
+    display: block;
+    position: absolute;
+    top: 100%;
+    width: 100%;
+    content: '';
+    height: 10px;
+    background: url("../img/divider.jpg");
+    left: 0;
+    z-index: -1;
+    margin-top: -10px;
+  }
 }
 
 .post__tabs li {
-  opacity: 0.6;
   padding-right: 20px;
   padding-bottom: 10px;
   margin-bottom: 30px;
   position: relative;
   display: inline-block;
+}
+
+.post__tabs li img, .post__tabs li a {
+  opacity: 0.6;
 }
 
 .post__tabs li:after {
@@ -4407,6 +4441,7 @@ a:hover, a:focus {
   content: '';
   width: 100%;
   height: 10px;
+  border-right: 10px solid whitesmoke;
   background: url("../img/divider.jpg");
 }
 
@@ -4420,9 +4455,23 @@ a:hover, a:focus {
   opacity: 1;
 }
 
+.post__tabs .post__tabs__active:before {
+  position: absolute;
+  top: 50px;
+  left: 15px;
+  display: block;
+  content: '';
+  border-color: transparent transparent whitesmoke transparent;
+  border-style: solid;
+  border-width: 10px;
+  z-index: 3;
+}
+
 .post__tabs .post__tabs__active:after {
   background: #ffcf00;
   border-bottom: 1px solid #996600;
+  position: absolute;
+  z-index: 2;
 }
 
 .post__tabs li img {
@@ -4544,9 +4593,14 @@ a:hover, a:focus {
   text-align: center;
   color: white;
   font-size: 20px;
-  background: red;
+  background: url("../img/banner.png");
+  background-size: cover;
+  width: 200px;
+  height: 50px;
   position: relative;
   top: 30px;
+  margin-left: -20px;
+  padding-top: 8px;
 }
 
 .privat__desc {
@@ -4561,14 +4615,15 @@ a:hover, a:focus {
 
 .privat__list {
   text-align: center;
-  margin-top: 70px;
+  margin-top: 90px;
+  margin-bottom: 30px;
 }
 
 .privat__list > li {
   width: 160px;
   height: 160px;
   display: inline-block;
-  margin: 0 40px 30px 0;
+  margin: 0 60px 30px 0;
 }
 
 .daftar {

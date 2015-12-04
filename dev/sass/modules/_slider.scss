@@ -68,31 +68,40 @@
 }
 
 .belajar__slider {
-		.slick-next {
-		position: absolute;
-		z-index: 1;
-		right: 0;
-		top: 35%;
-	}
+
 }
 
-.slider {
+.post__slider {
 	position: relative;
+	margin-bottom: 20px;
 }
 
 .belajar__slider__nav {
 	position: absolute;
-	z-index: 1;
+	z-index: 5;
 	top: 45%;
+	width: 100%;
+	.slick-arrow {
+		width: 30px;
+		opacity: 0.6;
+		color: $yellow;
+		background: $black;
+		border-radius: 100%;
+		border: 2px solid $yellow;
+		margin: 0 20px;
+		font-size: 25px;
+		z-index: 2;
+	}
 	.prev {
-		position: relative;
+		position: absolute;
 		left: 0;
 		top: 0;
 	}
 
 	.next {
-		position: relative;
-		float: right;
+		position: absolute;
+		right: 0;
 		top: 0;
+		z-index: 2;
 	}
 }
