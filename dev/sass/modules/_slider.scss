@@ -1,0 +1,98 @@
+.main__slider {
+	position: relative;
+	z-index: 0;
+	max-width: 100%;
+	max-height: 100%;
+	overflow: hidden;
+	img {
+		width: 100%;
+		height: 100%;
+	}
+	.slick-prev {
+		position: absolute;
+		z-index: 1;
+		top: 35%;
+	}
+	.slick-next {
+		position: absolute;
+		z-index: 1;
+		right: 0;
+		top: 35%;
+	}
+	.slick-arrow {
+		background: $black;
+		border: 5px solid $yellow;
+		outline: 5px solid $black;
+		opacity: 0.7;
+		border-radius: 100%;
+	}
+	.slick-dots {
+		position: absolute;
+		display: block;
+		z-index: 1;
+		bottom: 0;
+		margin-top: -200px;
+		left: 50%;
+		li {
+			display: inline-block;
+			list-style: none;
+		}
+		button {
+			background: transparent;
+			border: 2px solid white;
+			border-radius: 100%; 
+			padding: 5px;
+			margin: 3px;
+		}
+	}
+
+	.slick-active button {
+		background: $yellow;
+	}
+
+	.main__slider__cap {
+		display: block;
+		position: absolute;
+		background: white;
+		margin-top: -400px;
+		z-index: 1;
+		text-transform: uppercase;
+		font-size: 24px;
+		line-height: 50px;
+		width: 400px;
+		text-align: right;
+		margin-left: 720px;
+		padding: 30px;
+		opacity: 0.6;
+	}
+}
+
+.belajar__slider {
+		.slick-next {
+		position: absolute;
+		z-index: 1;
+		right: 0;
+		top: 35%;
+	}
+}
+
+.slider {
+	position: relative;
+}
+
+.belajar__slider__nav {
+	position: absolute;
+	z-index: 1;
+	top: 45%;
+	.prev {
+		position: relative;
+		left: 0;
+		top: 0;
+	}
+
+	.next {
+		position: relative;
+		float: right;
+		top: 0;
+	}
+}

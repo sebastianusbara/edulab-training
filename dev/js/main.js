@@ -12,36 +12,25 @@
         _jquery_local   : path.js + 'jquery.min.js',
         _jquery_migrate : 'http://code.jquery.com/jquery-migrate-1.2.1.min.js',
         _fastclick      : path.js + 'fastclick.min.js',
-        // _slickslider    : path.js + 'slick.min.js'
+        _slickslider    : path.js + 'slick.min.js'
     };
 
     var Site = {
 
         init: function () {
-            // Site.jqueryMigrate();
             Site.fastClick();
-            // Site.slickSlider();
             Site.enableActiveStateMobile();
             Site.WPViewportFix();
             Site.accordionSlide();
             Site.toggleButton();
             Site.toggleSubmenu();
-            // Site.sliderAutoplay();
             Site.toggleSidebar();
             Site.minatTabs();
             Site.buttonForm();
+            Site.slickSlider();
 
             window.Site = Site;
         },
-
-        // jqueryMigrate: function () {
-        //     Modernizr.load({
-        //         load    : assets._jquery_migrate,
-        //         complete: function () {
-        //             jquerymigrate.attach(document.body);
-        //         }
-        //     });
-        // },
 
         fastClick: function () {
             Modernizr.load({
@@ -51,15 +40,6 @@
                 }
             });
         },
-
-        // slickSlider: function () {
-        //     Modernizr.load({
-        //         load    : assets._slickslider,
-        //         complete: function () {
-        //             slickSlider.attach(document.body);
-        //         }
-        //     });
-        // },
 
         enableActiveStateMobile: function () {
             if ( document.addEventListener ) {
@@ -144,15 +124,33 @@
                 $registerForm.on ( 'click', '.btn', function() {
                 $(this).toggleClass('btn--active btn--deactive');
             });
+        },
+
+        slickSlider: function () {
+            Modernizr.load({
+                load    : assets._slickslider,
+                complete: function () {
+                    $('.main__slider').slick(
+                        {
+                          dots: true,
+                          infinite: true,
+                          prevArrow: $('.prev'),
+                          nextArrow: $('.next'),
+                          adaptiveHeight: false
+                        }
+                    );
+                    $('.belajar__slider').slick(
+                        {
+                          dots: false,
+                          infinite: true,
+                          prevArrow: $('.prev'),
+                          nextArrow: $('.next'),
+                          adaptiveHeight: false
+                        }
+                    );
+                }
+            });
         }
-        // sliderAutoplay: function () {
-        //     $('.autoplay').slick({
-        //       slidesToShow: 2,
-        //       slidesToScroll: 1,
-        //       autoplay: true,
-        //       autoplaySpeed: 2000,
-        //   });
-        // }
     };
 
     var checkJquery = function () {

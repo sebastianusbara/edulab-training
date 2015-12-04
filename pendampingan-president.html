@@ -16,22 +16,9 @@
     <title>Edulab | Pendampingan</title>
 
     <link rel="stylesheet" href="assets/css/main.css">
-    <!--     <link rel="stylesheet" href="assets/js/vendor/slick/slick.min.css">
-    <link rel="stylesheet" href="assets/js/vendor/slick/slick-theme.min.css"> -->
     <script src="assets/js/vendor/modernizr.min.js"></script>
-    <script src="assets/js/vendor/slick.min.js"></script>
 </head>
 <body>
-    <div id="fb-root"></div>
-    <script>
-    (function(d, s, id) {
-        var js, fjs = d.getElementsByTagName(s)[0];
-        if (d.getElementById(id)) return;
-        js = d.createElement(s); js.id = id;
-        js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.5&appId=1448778652109103";
-        fjs.parentNode.insertBefore(js, fjs);
-    }(document, 'script', 'facebook-jssdk'));
-    </script>
         <!--[if lt IE 8]>
         <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
@@ -129,7 +116,17 @@
                 </ul>
             </div>
             <div class="post__content layout-narrow">
-                <div class="test">Slider</div>
+                <div class="slider">
+                    <div class="belajar__slider">
+                        <img src="assets/img/slide1.png" alt="">
+                        <img src="assets/img/slide2.png" alt="">
+                        <img src="assets/img/slide3.png" alt="">
+                    </div>
+                    <div class="belajar__slider__nav">
+                        <button class="prev"><span class="fa fa-chevron-left"></span></button>
+                        <button class="next"><span class="fa fa-chevron-right"></span></button>
+                    </div>
+                </div>
                 <p>
                     Edulab menghadirkan program baru yakni PRESIDENT CLASS. Program ini khusus untuk siswa yang membutuhkan pembelajaran intensif yang dilakukan setiap hari. Program PRESIDENT CLASS dilengkapi oleh fasilitas yang nyaman dan lengkap.
                 </p>
@@ -190,8 +187,17 @@
     </div>
 </footer>
 </main>
-
-<script>window.myPrefix = '';</script>
-<script src="assets/js/main.min.js"></script>
+    <div id="fb-root"></div>
+    <script>
+    (function(d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) return;
+        js = d.createElement(s); js.id = id;
+        js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.5&appId=1448778652109103";
+        fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));
+    </script>
+    <script>window.myPrefix = '';</script>
+    <script src="assets/js/main.min.js"></script>
 </body>
 </html>

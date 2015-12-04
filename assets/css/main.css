@@ -829,6 +829,10 @@ table {
           border-radius: 4px;
 }
 
+.main__toggle:focus, .nav__button:focus {
+  outline: none;
+}
+
 /*! Baze Grid v2.0.2 | (c) 2014 @_bobbylie | https://github.com/ImBobby/Baze-Grid */
 .bzg:after {
   display: table;
@@ -1681,6 +1685,7 @@ input[type="number"] {
     border-color: transparent transparent transparent white;
     border-style: solid;
     margin-top: 40px;
+    z-index: 2;
   }
 }
 
@@ -1747,6 +1752,113 @@ input[type="number"] {
   .logo-mob {
     display: none !important;
   }
+}
+
+.main__slider {
+  position: relative;
+  z-index: 0;
+  max-width: 100%;
+  max-height: 100%;
+  overflow: hidden;
+}
+
+.main__slider img {
+  width: 100%;
+  height: 100%;
+}
+
+.main__slider .slick-prev {
+  position: absolute;
+  z-index: 1;
+  top: 35%;
+}
+
+.main__slider .slick-next {
+  position: absolute;
+  z-index: 1;
+  right: 0;
+  top: 35%;
+}
+
+.main__slider .slick-arrow {
+  background: #222;
+  border: 5px solid #ffcf00;
+  outline: 5px solid #222;
+  opacity: 0.7;
+  -webkit-border-radius: 100%;
+          border-radius: 100%;
+}
+
+.main__slider .slick-dots {
+  position: absolute;
+  display: block;
+  z-index: 1;
+  bottom: 0;
+  margin-top: -200px;
+  left: 50%;
+}
+
+.main__slider .slick-dots li {
+  display: inline-block;
+  list-style: none;
+}
+
+.main__slider .slick-dots button {
+  background: transparent;
+  border: 2px solid white;
+  -webkit-border-radius: 100%;
+          border-radius: 100%;
+  padding: 5px;
+  margin: 3px;
+}
+
+.main__slider .slick-active button {
+  background: #ffcf00;
+}
+
+.main__slider .main__slider__cap {
+  display: block;
+  position: absolute;
+  background: white;
+  margin-top: -400px;
+  z-index: 1;
+  text-transform: uppercase;
+  font-size: 24px;
+  line-height: 50px;
+  width: 400px;
+  text-align: right;
+  margin-left: 720px;
+  padding: 30px;
+  opacity: 0.6;
+}
+
+.belajar__slider .slick-next {
+  position: absolute;
+  z-index: 1;
+  right: 0;
+  top: 35%;
+}
+
+.slider {
+  position: relative;
+}
+
+.belajar__slider__nav {
+  position: absolute;
+  z-index: 1;
+  top: 45%;
+}
+
+.belajar__slider__nav .prev {
+  position: relative;
+  left: 0;
+  top: 0;
+}
+
+.belajar__slider__nav .next {
+  position: relative;
+  float: right;
+  top: 0;
 }
 
 /*!
@@ -4105,6 +4217,105 @@ input[type="number"] {
   content: "\f23a";
 }
 
+/* Slider */
+.slick-slider {
+  position: relative;
+  display: block;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  -webkit-touch-callout: none;
+  -khtml-user-select: none;
+  -ms-touch-action: pan-y;
+  touch-action: pan-y;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.slick-list {
+  position: relative;
+  display: block;
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+}
+
+.slick-list:focus {
+  outline: none;
+}
+
+.slick-list.dragging {
+  cursor: pointer;
+  cursor: hand;
+}
+
+.slick-slider .slick-track,
+.slick-slider .slick-list {
+  -webkit-transform: translate3d(0, 0, 0);
+  -ms-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
+}
+
+.slick-track {
+  position: relative;
+  top: 0;
+  left: 0;
+  display: block;
+}
+
+.slick-track:before,
+.slick-track:after {
+  display: table;
+  content: '';
+}
+
+.slick-track:after {
+  clear: both;
+}
+
+.slick-loading .slick-track {
+  visibility: hidden;
+}
+
+.slick-slide {
+  display: none;
+  float: left;
+  height: 100%;
+  min-height: 1px;
+}
+
+[dir='rtl'] .slick-slide {
+  float: right;
+}
+
+.slick-slide img {
+  display: block;
+}
+
+.slick-slide.slick-loading img {
+  display: none;
+}
+
+.slick-slide.dragging img {
+  pointer-events: none;
+}
+
+.slick-initialized .slick-slide {
+  display: block;
+}
+
+.slick-loading .slick-slide {
+  visibility: hidden;
+}
+
+.slick-vertical .slick-slide {
+  display: block;
+  height: auto;
+  border: 1px solid transparent;
+}
+
+.slick-arrow.slick-hidden {
+  display: none;
+}
+
 html {
   font: 400 16px sans-serif;
   line-height: 1.6em;
@@ -4473,9 +4684,7 @@ a:hover, a:focus {
 }
 
 .sitemap {
-  margin-top: 50px;
   margin-left: 20px;
-  display: inline-block;
 }
 
 .sitemap__icon {
@@ -4496,8 +4705,15 @@ a:hover, a:focus {
 }
 
 .sitemap__category {
-  padding-left: 75px;
-  padding-bottom: 30px;
+  padding-left: 0;
+  padding-bottom: 0;
+}
+
+@media screen and (min-width: 48em) {
+  .sitemap__category {
+    padding-left: 75px;
+    padding-bottom: 30px;
+  }
 }
 
 .sitemap__category:before {
@@ -4509,7 +4725,37 @@ a:hover, a:focus {
 }
 
 .sitemap__category:first-child {
+  position: relative;
+  left: -120px;
+}
+
+.sitemap__category:first-child a {
+  position: relative;
+  left: 5px;
+  margin-top: 5px;
+}
+
+.sitemap__category:first-child:before {
+  display: none;
+}
+
+.sitemap__category:first-child:after {
+  content: '';
+  position: absolute;
+  margin-top: -30px;
+  left: 135px;
+  width: 80px;
+  border-top: 1px solid #a2a2a2;
+}
+
+.sitemap__category:nth-child(2) {
   border-left: 1px solid #a2a2a2;
+  margin-top: -85px;
+  margin-left: 80px;
+}
+
+.sitemap__category:nth-child(3) {
+  margin-left: 80px;
 }
 
 .sitemap__category__title {
@@ -4541,6 +4787,13 @@ a:hover, a:focus {
   background: url("../img/arrow.png");
   background-repeat: no-repeat;
   margin: 5px 0 0 -20px;
+}
+
+.gallery__select {
+  background: white;
+  padding: 10px;
+  border: 1px solid #d5d5d5;
+  text-align: right;
 }
 
 .nav__footer {
