@@ -181,12 +181,71 @@
                 load    : assets._fullcalendar,
                 complete: function() {
                     $('#calendar').fullCalendar(
-                    {
-                        prev: 'left-single-arrow',
-                        next: 'right-single-arrow',
-                        prevYear: 'left-double-arrow',
-                        nextYear: 'right-double-arrow'
-                    }
+                        {
+                            header: {
+                                left: 'title',
+                                right: 'prev, next'
+                            },
+                            firstDay: 1,
+                            defaultDate: '2013-09-01',
+                            editable: true,
+                            eventLimit: true, // allow "more" link when too many events
+                            dayNames: [ 'Minggu', 'Senin', 'Selasa', 'Rabu', 'Kamis', 'Jumat', 'Sabtu'],
+                            dayNamesShort: ['Minggu', 'Senin', 'Selasa', 'Rabu', 'Kamis', 'Jumat', 'Sabtu'],
+                            events: [
+                                {
+                                    className: 'fc-green',
+                                    start: '2013-09-02',
+                                    end: '2013-09-08',
+                                    tooltip: 'This is a cool event very awesome asdasndjasndjasndjsaasdisadnasnd'
+                                },
+                                {
+                                    className: 'fc-pink',
+                                    start: '2013-09-02',
+                                    end: '2013-09-04',
+                                    tooltip: 'This is a cool event'
+                                },
+                                {
+                                    className: 'fc-blue',
+                                    start: '2013-09-02',
+                                    end: '2013-09-04'
+                                },
+                                {
+                                    className: 'fc-green',
+                                    start: '2013-09-09',
+                                    end: '2013-09-12',
+                                    tooltip: 'This is a cool event'
+                                },
+                                {
+                                    className: 'fc-pink',
+                                    start: '2013-09-12',
+                                    end: '2013-09-12'
+                                },
+                                {
+                                    className: 'fc-blue',
+                                    start: '2013-09-13',
+                                    end: '2013-09-15'
+                                },
+                                {
+                                    className: 'fc-green',
+                                    start: '2013-09-16',
+                                    end: '2013-09-22'
+                                },
+                                {
+                                    className: 'fc-blue',
+                                    start: '2013-09-17',
+                                    end: '2013-09-17'
+                                },
+                                {
+                                    className: 'fc-pink',
+                                    start: '2013-09-30',
+                                    end: '2013-09-30'
+                                },
+                            ],
+                            eventRender: function(event, element) {
+                            element.attr('title', event.tooltip);
+                            }
+                        }
                     );
                 }
             });
