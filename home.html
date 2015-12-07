@@ -30,7 +30,7 @@
             <button class="nav__button"><span class="fa fa-bars"></span></button>
         </header>
         <ul class="nav__menu">
-            <li class="nav__menu-list nav__menu-list--dropdown li-active">
+            <li class="nav__menu-list nav__menu-list--dropdown">
                 <a href="#">Tentang Edulab 
                     <span class="fa fa-chevron-right fa-desk"></span>
                     <span class="fa fa-chevron-down fa-mob"></span>
@@ -86,72 +86,107 @@
 
     <main class="main-content compact">
         <button class="main__toggle"><span class="fa fa-bars"></span></button>
-        <div class="main__slider">
-            <div>
-                <figure>
-                <img src="assets/img/educamp.jpg" alt="Educamp">
-                <figcaption class="main__slider__cap">
-                    Lembaga Konsultan yang dapat membuat belajar menjadi addicted.
-                </figcaption>
-                </figure>
+        <div class="post__slider">
+            <div class="main__slider">
+                <div>
+                    <figure>
+                    <img src="assets/img/educamp.jpg" alt="Educamp">
+                    <figcaption class="main__slider__cap">
+                        Lembaga Konsultan yang dapat membuat belajar menjadi addicted.
+                    </figcaption>
+                    </figure>
+                </div>
+                <div><img src="assets/img/travel.jpg" alt="Educamp"></div>
+                <div><img src="assets/img/gathering.jpg" alt="Educamp"></div>
             </div>
-            <div><img src="assets/img/travel.jpg" alt="Educamp"></div>
-            <div><img src="assets/img/gathering.jpg" alt="Educamp"></div>
-        </div>
-        <div class="main__slider__nav">
-            <button class="prev"><span class="fa fa-chevron-left"></span></button>
-            <button class="next"><span class="fa fa-chevron-right"></span></button>
+            <div class="main__slider__nav">
+                <button class="prev"><span class="fa fa-angle-left"></span></button>
+                <button class="next"><span class="fa fa-angle-right"></span></button>
+            </div>
         </div>
         <div class="container">
-            <section>
+            <section class="main__program">
                 <div class="bzg">
-                    <div class="bzg_c" data-col="m6">
-                        <h3>eduCamp</h3>
-                        Program EduCamp merupakan progam yang ditujukan untuk alumni SMA yang akan melanjutkan studi ke perguruan tinggi negeri.
+                    <div class="bzg_c cf" data-col="m6">
+                        <div class="main__program__icon circle-icon">
+                            <img src="assets/img/icon-camp.png" alt="Educamp Icon">
+                        </div>
+                        <h2 class="post__subheading">eduCamp</h2>
+                        <p>
+                            Program EduCamp merupakan progam yang ditujukan untuk alumni SMA yang akan melanjutkan studi ke perguruan tinggi negeri.
+                        </p>
                     </div>
                     <div class="bzg_c" data-col="m6">
-                        <h3>eduTravel</h3>
-                        EduTravel adalah sebuah format pembelajaran dalam bentuk sebuah petualangan yang menantang.
+                        <div class="main__program__icon circle-icon plane-icon">
+                            <img src="assets/img/icon-plane.png" alt="Edu Travel Icon">
+                        </div>
+                        <h2 class="post__subheading">eduTravel</h2>
+                        <p>
+                            EduTravel adalah sebuah format pembelajaran dalam bentuk sebuah petualangan yang menantang.
+                        </p>
                     </div>
                 </div>
                 <div class="bzg">
                     <div class="bzg_c" data-col="m6">
-                        <h3>eduTalent</h3>
-                        Melalui talents mapping dan ST30, siswa dapat mengetahui minat dan bakatnya berdasarkan personal strange dan potensi yang dimiliki siswa.
+                        <div class="main__program__icon circle-icon">
+                            <img src="assets/img/icon-search.png" alt="Edu Talent Icon">
+                        </div>
+                        <h2 class="post__subheading">eduTalent</h2>
+                        <p>
+                            Melalui talents mapping dan ST30, siswa dapat mengetahui minat dan bakatnya berdasarkan personal strange dan potensi yang dimiliki siswa.
+                        </p>
                     </div>
                     <div class="bzg_c" data-col="m6">
-                        <h3>eduPrivate</h3>
-                        Edulab Privat merupakan suatu alternatif belajar bagi siswa - siswi tingkat SD-SMP & SMA yang ingin mendapatkan pembelajaran secara fleksibel dan leluasa.
+                        <div class="main__program__icon circle-icon">
+                            <img src="assets/img/icon-lock.png" alt="Edu Private Icon">
+                        </div>
+                        <h2 class="post__subheading">eduPrivate</h2>
+                        <p>
+                            Edulab Privat merupakan suatu alternatif belajar bagi siswa - siswi tingkat SD-SMP & SMA yang ingin mendapatkan pembelajaran secara fleksibel dan leluasa.
+                        </p>
                     </div>
                 </div>
             </section>
-            <section>
+            <section class="post">
                 <div class="bzg">
-                    <div class="bzg_c" data-col="m6">
-                        <article>
-                            <header>
-                                <h3>LATEST NEWS</h3>
-                                <a href="#">LIHAT SEMUA</a>
+                    <div class="bzg_c" data-col="l6">
+                        <article class="post__summary">
+                            <header class="post__summary__header">
+                                <ul class="list-inline list-nostyle">
+                                    <li><h3>LATEST NEWS</h3></li>
+                                    <li class="pull-right"><a href="news.html">LIHAT SEMUA <span class="fa fa-angle-right fa-lg"></a></li>
+                                </ul>
                             </header>
-                            <div>
-                                <img src="#" alt="#">
-                                <h4>Syarat Siswa yang boleh ikut SMPTN 2013<h4>
-                                <h6>Sabtu, 16 Februari 2013</h6>
-                                Pelaksanaan Seleksi Nasional Masuk Perguruan Tinggi Negeri (SNMPTN) tahun depan, berbeda dengan tahun - tahun sebelumnya.
+                            <div class="post__summary__content clearfix">
+                                <div class="post__thumb">
+                                    <img src="assets/img/news1.jpg" alt="News Thumbnail">
+                                </div>
+                                <h4 class="post__summary__title">Syarat Siswa yang boleh ikut SMPTN 2013</h4>
+                                <h5 class="post__summary__date">Sabtu, 16 Februari 2013</h5>
+                                <p>
+                                    Pelaksanaan Seleksi Nasional Masuk Perguruan Tinggi Negeri (SNMPTN) tahun depan, berbeda dengan tahun - tahun sebelumnya.
+                                </p>
                             </div>
                         </article>
                     </div>
-                    <div class="bzg_c" data-col="m6">
-                        <article>
-                            <header>
-                                <h3>AGENDA TERBARU</h3>
-                                <a href="#">LIHAT SEMUA</a>
+                    <div class="bzg_c" data-col="l6">
+                        <article class="post__summary">
+                            <header class="post__summary__header">
+                                <ul class="list-inline list-nostyle">
+                                    <li><h3>AGENDA TERBARU</h3></li>
+                                    <li class="pull-right"><a href="event.html">LIHAT SEMUA <span class="fa fa-angle-right fa-lg"></a></span>
+                                    </li>
+                                </ul>
                             </header>
-                            <div>
-                                <img src="#" alt="#">
-                                <h4>Grand Opening dan Seminar SBMPTN<h4>
-                                <h6>Sabtu, 16 Februari 2013</h6>
-                                KORANBOGOR.com, MEDAN-Sabtu pagi, 16 Februari 2013, pukul 09.00 WIB, Edulan Medan jalan Gajah Mada didatangi oleh...
+                            <div class="post__summary__content clearfix">
+                                <div class="post__thumb">
+                                    <img src="assets/img/event1.jpg" alt="Event Thumbnail">
+                                </div>
+                                <h4 class="post__summary__title">Grand Opening dan Seminar SBMPTN</h4>
+                                <h5 class="post__summary__date">Sabtu, 16 Februari 2013</h5>
+                                <p>
+                                    KORANBOGOR.com, MEDAN-Sabtu pagi, 16 Februari 2013, pukul 09.00 WIB, Edulan Medan jalan Gajah Mada didatangi oleh...
+                                </p>
                             </div>
                         </article>
                     </div>

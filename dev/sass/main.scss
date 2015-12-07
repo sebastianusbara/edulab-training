@@ -68,6 +68,38 @@ a {
     width: 100%;
 }
 
+.main__program {
+    padding: 10px 0 10px 0;
+    border-bottom: 5px solid $yellow;
+    margin-bottom: 20px;
+    p {
+        margin-left: 10px;
+    }
+}
+
+.main__program .bzg_c {
+    padding-bottom: 40px;
+    font-size: 14px;
+    @media #{$medium} {
+        padding-bottom: 10px;
+    }
+}
+.main__program__icon {
+    float: left;
+    margin: 15px 10px 40px 0;
+    width: 70px;
+    height: 70px;
+    padding: 15px;
+    @media #{$medium} {
+        margin: 10px 30px 80px 0;
+        width: 120px;
+        height: 120px;
+    }
+    @media #{$large} {
+        margin: 10px 30px 40px 0;
+    }
+}
+
 .post {
     margin-bottom: 40px;
 }
@@ -84,7 +116,10 @@ a {
 }
 
 .post__subheading {
-    margin-bottom: 10px;
+    margin-bottom: 0px;
+    @media #{$medium} {
+        margin-bottom: 10px;
+    }
 }
 
 .post__bc {
@@ -196,6 +231,67 @@ a {
     @media #{$medium} {
         width: auto;
     }
+}
+
+.post__summary {
+    padding-right: 0;
+    margin-bottom: 40px;
+    @media #{$medium} {
+        padding-right: 30px;
+        margin-bottom: 10px;
+    }
+}
+
+.post__summary__header {
+    position: relative;
+    font-size: 11px;
+    &:after {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        content:'';
+        height: 10px;
+        width: 100%;
+        background: url('../img/divider.jpg');
+    }
+    @media #{$medium} {
+        font-size: 14px;
+    }
+    a {
+        color: $black;
+    }
+    a:hover {
+        color: $link_hover;
+    }
+    span {
+        margin-left: 5px;
+    }
+}
+
+.post__summary__content {
+    margin-top: 10px;
+}
+
+.post__summary__title, .post__summary__date {
+    margin: 0;
+    text-align: center;
+    @media #{$medium} {
+        text-align: left;
+    }
+}
+
+.post__thumb {
+    float: none;
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+    padding: 0 20px 20px 0;
+        @media #{$medium} {
+            float: left;
+        }
+        @media #{$large} {
+            margin-bottom: 10px;
+        }
 }
 
 .gallery {
