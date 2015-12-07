@@ -2016,6 +2016,20 @@ input[type="number"] {
   border: none;
   -webkit-border-radius: 10px;
           border-radius: 10px;
+  position: relative;
+}
+
+#calendar .fc-event:hover:before {
+  content: '';
+  position: absolute;
+  border-color: #ffffe1 transparent transparent transparent;
+  border-width: 10px;
+  top: -15px;
+  left: 45%;
+  border-style: solid;
+  opacity: 1;
+  margin: 0 auto;
+  z-index: 6;
 }
 
 #calendar .fc-event:hover:after {
@@ -2031,7 +2045,19 @@ input[type="number"] {
 }
 
 #calendar .fc-green {
+  position: relative;
   background-color: #b9db78 !important;
+}
+
+#calendar .fc-green:hover:before {
+  content: 'oreooo';
+  position: absolute;
+  width: 200px;
+  height: 50px;
+  background: #ffffe1;
+  top: -105px;
+  left: 25%;
+  z-index: 6;
 }
 
 #calendar .fc-pink {
@@ -2088,6 +2114,7 @@ input[type="number"] {
 }
 
 .calendar__desc__title {
+  margin-top: 20px;
   margin-bottom: 5px;
   font-weight: 300;
 }
