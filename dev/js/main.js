@@ -12,7 +12,10 @@
         _jquery_local   : path.js + 'jquery.min.js',
         _jquery_migrate : 'http://code.jquery.com/jquery-migrate-1.2.1.min.js',
         _fastclick      : path.js + 'fastclick.min.js',
-        _slickslider    : path.js + 'slick.min.js'
+        _slickslider    : path.js + 'slick.min.js',
+        _moment         : path.js + 'moment.min.js',
+        _jqueryui       : path.js + 'jquery-ui.custom.min.js',
+        _fullcalendar   : path.js + 'fullcalendar.min.js'
     };
 
     var Site = {
@@ -28,6 +31,9 @@
             Site.minatTabs();
             Site.buttonForm();
             Site.slickSlider();
+            Site.moment();
+            Site.jqueryUI();
+            Site.fullCalendar();
 
             window.Site = Site;
         },
@@ -147,6 +153,40 @@
                           nextArrow: $('.next'),
                           adaptiveHeight: false
                         }
+                    );
+                }
+            });
+        },
+
+        moment: function () {
+            Modernizr.load({
+                load    : assets._moment,
+                complete: function() {
+
+                }
+            });
+        },
+
+        jqueryUI: function () {
+            Modernizr.load({
+                load    : assets._jqueryui,
+                complete: function() {
+                    
+                }
+            });
+        },
+
+        fullCalendar: function () {
+            Modernizr.load({
+                load    : assets._fullcalendar,
+                complete: function() {
+                    $('#calendar').fullCalendar(
+                    {
+                        prev: 'left-single-arrow',
+                        next: 'right-single-arrow',
+                        prevYear: 'left-double-arrow',
+                        nextYear: 'right-double-arrow'
+                    }
                     );
                 }
             });
