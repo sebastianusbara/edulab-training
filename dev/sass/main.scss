@@ -499,9 +499,23 @@ a {
     border-bottom: 1px solid $black30;
     padding: 0 0 20px 0;
     @media #{$medium} {
-        width: 95%;
-        padding: 20px;
+        padding: 0 0 30px 0;
     }
+}
+
+.news__detail {
+    margin-top: 20px;
+}
+
+.news__share {
+    padding-left: 20px;
+    li {
+        padding-right: 30px;
+    }
+}
+
+.terkait {
+    margin-top: 20px;
 }
 
 .news__thumbs {
@@ -516,6 +530,9 @@ a {
     color: $black80;
     position: relative;
     left: 0px;
+    h2 {
+        margin: 0;
+    }
     h3 {
         margin: 0;
     }
@@ -532,12 +549,22 @@ a {
 }
 
 .news__content {
-    font-size: 14px;
+    font-size: 16px;
     position: relative;
     left: 0px;
     @media #{$medium} {
         left: 10px;
     }
+
+    .news__header {
+        padding: 0;
+        left: 0;
+        margin-bottom: 10px;
+    }
+}
+
+.news__image {
+    margin-bottom: 10px;
 }
 
 .news__pagination {
@@ -547,9 +574,13 @@ a {
     border-top: 5px solid $yellow;
 }
 
-.event__header {
+.sidebar {
+    margin-top: 20px;
+}
+
+.sidebar__header {
     position: relative;
-    margin-bottom: 30px;
+    margin-bottom: 20px;
     font-size: 12px;
     &:after {
         position: absolute;
@@ -561,10 +592,22 @@ a {
     }
     h3 {
         margin: 0;
+        font-size: 16px;
+    }
+    @media #{$medium} {
+        h3 {
+            font-size: 12px;
+        }
+    }
+
+    @media #{$large} {
+        h3 {
+            font-size: 16px;
+        }
     }
 }
 
-.event__header__link {
+.sidebar__header__link {
     a {
         color: $black80;
         text-transform: uppercase;
@@ -574,6 +617,21 @@ a {
     }
     span {
         margin-left: 2px;
+    }
+}
+
+.sidebar__list {
+    li { 
+        border-bottom: 1px dotted $black80;
+        padding: 5px 0;
+    }
+    a {
+        color: $black;
+        display: block;
+        font-weight: bold;
+    }
+    a:hover {
+        color: $link_hover;
     }
 }
 

@@ -1487,6 +1487,11 @@ input[type="number"] {
   background: #3f729b;
 }
 
+.facebook-like {
+  position: relative;
+  top: -7px;
+}
+
 .nav {
   display: block;
   width: 100%;
@@ -6451,9 +6456,24 @@ a:hover, a:focus {
 
 @media screen and (min-width: 48em) {
   .news {
-    width: 95%;
-    padding: 20px;
+    padding: 0 0 30px 0;
   }
+}
+
+.news__detail {
+  margin-top: 20px;
+}
+
+.news__share {
+  padding-left: 20px;
+}
+
+.news__share li {
+  padding-right: 30px;
+}
+
+.terkait {
+  margin-top: 20px;
 }
 
 .news__thumbs {
@@ -6471,6 +6491,10 @@ a:hover, a:focus {
   color: #555555;
   position: relative;
   left: 0px;
+}
+
+.news__header h2 {
+  margin: 0;
 }
 
 .news__header h3 {
@@ -6493,7 +6517,7 @@ a:hover, a:focus {
 }
 
 .news__content {
-  font-size: 14px;
+  font-size: 16px;
   position: relative;
   left: 0px;
 }
@@ -6504,6 +6528,16 @@ a:hover, a:focus {
   }
 }
 
+.news__content .news__header {
+  padding: 0;
+  left: 0;
+  margin-bottom: 10px;
+}
+
+.news__image {
+  margin-bottom: 10px;
+}
+
 .news__pagination {
   margin-top: 40px;
   display: inline-block;
@@ -6511,13 +6545,17 @@ a:hover, a:focus {
   border-top: 5px solid #ffcf00;
 }
 
-.event__header {
+.sidebar {
+  margin-top: 20px;
+}
+
+.sidebar__header {
   position: relative;
-  margin-bottom: 30px;
+  margin-bottom: 20px;
   font-size: 12px;
 }
 
-.event__header:after {
+.sidebar__header:after {
   position: absolute;
   top: 100%;
   content: '';
@@ -6526,21 +6564,49 @@ a:hover, a:focus {
   background: url("../img/divider.jpg");
 }
 
-.event__header h3 {
+.sidebar__header h3 {
   margin: 0;
+  font-size: 16px;
 }
 
-.event__header__link a {
+@media screen and (min-width: 48em) {
+  .sidebar__header h3 {
+    font-size: 12px;
+  }
+}
+
+@media screen and (min-width: 60em) {
+  .sidebar__header h3 {
+    font-size: 16px;
+  }
+}
+
+.sidebar__header__link a {
   color: #555555;
   text-transform: uppercase;
 }
 
-.event__header__link a:hover {
+.sidebar__header__link a:hover {
   color: #0074ba;
 }
 
-.event__header__link span {
+.sidebar__header__link span {
   margin-left: 2px;
+}
+
+.sidebar__list li {
+  border-bottom: 1px dotted #555555;
+  padding: 5px 0;
+}
+
+.sidebar__list a {
+  color: #222;
+  display: block;
+  font-weight: bold;
+}
+
+.sidebar__list a:hover {
+  color: #0074ba;
 }
 
 .sitemap {
