@@ -41,6 +41,9 @@ $BTN_PADDING: $space/3 $space;
     &[disabled] {
         cursor: not-allowed;
     }
+    &:hover {
+        background: white;
+    }
 }
 
 
@@ -70,8 +73,14 @@ $BTN_PADDING: $space/3 $space;
 .btn--yellow {
     background: $yellow;
     color: $black80;
-    font-size: 16px;
+    font-size: 14px;
     font-weight: bold;
+    border-radius: 3px;
+    border: 2px solid $light-brown;
+    &:hover {
+        background: white;
+        color: $light-brown;
+    }
 }
 
 .btn--round {

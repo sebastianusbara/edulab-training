@@ -31,7 +31,7 @@
 	}
 	table {
 		margin: 0;
-		height: 110px; 
+		height: 110px;
 	}
 	.fc-widget-header {
 		background: $black80!important;
@@ -55,6 +55,18 @@
 		border-radius: 10px;
 		position: relative;
 		&:hover {
+			&:before {
+				content:'';
+				position: absolute;
+				border-color : $cream transparent transparent transparent;
+				border-width: 10px;
+				top: -15px;
+				left: 45%;
+				border-style: solid;
+				opacity: 1;
+				margin: 0 auto;
+				z-index: 6;
+			}
 			&:after {
 				content: '';
 				position: absolute;
@@ -68,7 +80,20 @@
 		}
 	}
 	.fc-green {
+		position: relative;
 		background-color: $light-green!important;
+		&:hover {
+			&:before {
+				content:'oreooo';
+				position: absolute;
+				width: 200px;
+				height: 50px;
+				background: $cream;
+				top: -105px;
+				left: 25%;
+				z-index: 6;
+			}
+		}
 	}
 	.fc-pink {
 		background-color: $light-pink!important;
@@ -126,47 +151,4 @@
 	margin-top: 20px;
 	margin-bottom: 5px;
 	font-weight: 300;
-}
-
-.calendar__tooltip {
-	width: 250px;
-	background: $cream;
-	height: 150px;
-	box-shadow: 2px 2px 20px 2px $black70;
-	position: absolute;
-	z-index: 10;
-	top: -120px;
-	padding: 0;
-	font-size: 10px;
-	&:before {
-		position: absolute;
-		content: '';
-		border-color: $cream transparent transparent transparent;
-		border-width: 12px;
-		border-style: solid;
-		top: 100%;
-		left: 45%;
-	}
-}
-
-.calendar__tooltip__head {
-	height: 45px;
-	border-bottom: 1px solid $black30;
-	position: relative;
-	padding: 10px;
-	&:before {
-		margin: 2px;
-		content: '';
-		border-color: transparent $light-green transparent transparent;
-		border-width: 12px;
-		border-style: solid;
-		position: absolute;
-		top: -10px;
-		right: -10px;
-		transform: rotate(-225deg);
-	}
-}
-
-.calendar__tooltip__body {
-	padding: 10px;
 }

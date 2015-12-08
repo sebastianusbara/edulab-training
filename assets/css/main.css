@@ -810,6 +810,10 @@ table {
   cursor: not-allowed;
 }
 
+.btn:hover {
+  background: white;
+}
+
 .btn--block {
   width: 100%;
 }
@@ -833,8 +837,16 @@ table {
 .btn--yellow {
   background: #ffcf00;
   color: #555555;
-  font-size: 16px;
+  font-size: 14px;
   font-weight: bold;
+  -webkit-border-radius: 3px;
+          border-radius: 3px;
+  border: 2px solid #dfb500;
+}
+
+.btn--yellow:hover {
+  background: white;
+  color: #dfb500;
 }
 
 .btn--round {
@@ -2019,19 +2031,6 @@ input[type="number"] {
   position: relative;
 }
 
-#calendar .fc-event:hover:before {
-  content: '';
-  position: absolute;
-  border-color: #ffffe1 transparent transparent transparent;
-  border-width: 10px;
-  top: -15px;
-  left: 45%;
-  border-style: solid;
-  opacity: 1;
-  margin: 0 auto;
-  z-index: 6;
-}
-
 #calendar .fc-event:hover:after {
   content: '';
   position: absolute;
@@ -2045,19 +2044,7 @@ input[type="number"] {
 }
 
 #calendar .fc-green {
-  position: relative;
   background-color: #b9db78 !important;
-}
-
-#calendar .fc-green:hover:before {
-  content: 'oreooo';
-  position: absolute;
-  width: 200px;
-  height: 50px;
-  background: #ffffe1;
-  top: -105px;
-  left: 25%;
-  z-index: 6;
 }
 
 #calendar .fc-pink {
@@ -2117,6 +2104,54 @@ input[type="number"] {
   margin-top: 20px;
   margin-bottom: 5px;
   font-weight: 300;
+}
+
+.calendar__tooltip {
+  width: 250px;
+  background: #ffffe1;
+  height: 150px;
+  -webkit-box-shadow: 2px 2px 20px 2px #6f6f6f;
+          box-shadow: 2px 2px 20px 2px #6f6f6f;
+  position: absolute;
+  z-index: 10;
+  top: -120px;
+  padding: 0;
+  font-size: 10px;
+}
+
+.calendar__tooltip:before {
+  position: absolute;
+  content: '';
+  border-color: #ffffe1 transparent transparent transparent;
+  border-width: 12px;
+  border-style: solid;
+  top: 100%;
+  left: 45%;
+}
+
+.calendar__tooltip__head {
+  height: 45px;
+  border-bottom: 1px solid #d5d5d5;
+  position: relative;
+  padding: 10px;
+}
+
+.calendar__tooltip__head:before {
+  margin: 2px;
+  content: '';
+  border-color: transparent #b9db78 transparent transparent;
+  border-width: 12px;
+  border-style: solid;
+  position: absolute;
+  top: -10px;
+  right: -10px;
+  -webkit-transform: rotate(-225deg);
+      -ms-transform: rotate(-225deg);
+          transform: rotate(-225deg);
+}
+
+.calendar__tooltip__body {
+  padding: 10px;
 }
 
 /*!
@@ -6406,6 +6441,106 @@ a:hover, a:focus {
 
 .kontak-form__inputs {
   padding: 20px 30px;
+}
+
+.news {
+  width: 100%;
+  border-bottom: 1px solid #d5d5d5;
+  padding: 0 0 20px 0;
+}
+
+@media screen and (min-width: 48em) {
+  .news {
+    width: 95%;
+    padding: 20px;
+  }
+}
+
+.news__thumbs {
+  padding: 0 10px 0 0;
+}
+
+@media screen and (min-width: 48em) {
+  .news__thumbs {
+    padding: 10px;
+  }
+}
+
+.news__header {
+  padding: 0px;
+  color: #555555;
+  position: relative;
+  left: 0px;
+}
+
+.news__header h3 {
+  margin: 0;
+}
+
+.news__header a {
+  color: #555555;
+}
+
+.news__header a:hover {
+  color: #0074ba;
+}
+
+@media screen and (min-width: 48em) {
+  .news__header {
+    padding: 15px;
+    left: 10px;
+  }
+}
+
+.news__content {
+  font-size: 14px;
+  position: relative;
+  left: 0px;
+}
+
+@media screen and (min-width: 48em) {
+  .news__content {
+    left: 10px;
+  }
+}
+
+.news__pagination {
+  margin-top: 40px;
+  display: inline-block;
+  width: 100%;
+  border-top: 5px solid #ffcf00;
+}
+
+.event__header {
+  position: relative;
+  margin-bottom: 30px;
+  font-size: 12px;
+}
+
+.event__header:after {
+  position: absolute;
+  top: 100%;
+  content: '';
+  width: 100%;
+  height: 10px;
+  background: url("../img/divider.jpg");
+}
+
+.event__header h3 {
+  margin: 0;
+}
+
+.event__header__link a {
+  color: #555555;
+  text-transform: uppercase;
+}
+
+.event__header__link a:hover {
+  color: #0074ba;
+}
+
+.event__header__link span {
+  margin-left: 2px;
 }
 
 .sitemap {

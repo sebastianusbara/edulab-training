@@ -197,59 +197,73 @@
                                     className: 'fc-green',
                                     start: '2013-09-02',
                                     end: '2013-09-08',
-                                    tooltip: 'This is a cool event very awesome asdasndjasndjasndjsaasdisadnasnd'
+                                    tooltip: 'Masa Pengajuan penundaan / keringanan / cicilan Biaya Pendidikan Semester Gasal 2013/2014'
                                 },
                                 {
                                     className: 'fc-pink',
                                     start: '2013-09-02',
                                     end: '2013-09-04',
-                                    tooltip: 'This is a cool event'
+                                    tooltip: 'Masa Pengajuan penundaan / keringanan / cicilan Biaya Pendidikan Semester Gasal 2013/2014'
                                 },
                                 {
                                     className: 'fc-blue',
                                     start: '2013-09-02',
-                                    end: '2013-09-04'
+                                    end: '2013-09-04',
+                                    tooltip: 'Masa Pengajuan penundaan / keringanan / cicilan Biaya Pendidikan Semester Gasal 2013/2014'
                                 },
                                 {
                                     className: 'fc-green',
                                     start: '2013-09-09',
                                     end: '2013-09-12',
-                                    tooltip: 'This is a cool event'
+                                    tooltip: 'Masa Pengajuan penundaan / keringanan / cicilan Biaya Pendidikan Semester Gasal 2013/2014'
                                 },
                                 {
                                     className: 'fc-pink',
                                     start: '2013-09-12',
-                                    end: '2013-09-12'
+                                    end: '2013-09-13',
+                                    tooltip: 'Masa Pengajuan penundaan / keringanan / cicilan Biaya Pendidikan Semester Gasal 2013/2014'
                                 },
                                 {
                                     className: 'fc-blue',
                                     start: '2013-09-13',
-                                    end: '2013-09-15'
+                                    end: '2013-09-15',
+                                    tooltip: 'Masa Pengajuan penundaan / keringanan / cicilan Biaya Pendidikan Semester Gasal 2013/2014'
                                 },
                                 {
                                     className: 'fc-green',
                                     start: '2013-09-16',
-                                    end: '2013-09-22'
+                                    end: '2013-09-22',
+                                    tooltip: 'Masa Pengajuan penundaan / keringanan / cicilan Biaya Pendidikan Semester Gasal 2013/2014'
                                 },
                                 {
                                     className: 'fc-blue',
                                     start: '2013-09-17',
-                                    end: '2013-09-17'
+                                    end: '2013-09-18',
+                                    tooltip: 'Masa Pengajuan penundaan / keringanan / cicilan Biaya Pendidikan Semester Gasal 2013/2014'
                                 },
                                 {
                                     className: 'fc-pink',
                                     start: '2013-09-30',
-                                    end: '2013-09-30'
+                                    end: '2013-10-01',
+                                    tooltip: 'Masa Pengajuan penundaan / keringanan / cicilan Biaya Pendidikan Semester Gasal 2013/2014'
                                 },
                             ],
-                            eventRender: function(event, element) {
-                            element.attr('title', event.tooltip);
+
+                            eventClick: function(event) {
+                                $start      = moment(event.start).format('DD');
+                                $monthyear  = moment(event.end).format('MMMM YYYY');
+                                $end        = moment(event.end).format('DD');
+                                $tooltip    = event.tooltip;
+
+                                $(this).after('<div class="calendar__tooltip"><div class="calendar__tooltip__head"></div><div class="calendar__tooltip__body"></div></div>');
+                                $('.calendar__tooltip__head').text($start + ' - ' + $end + ' ' + $monthyear );
+                                $('.calendar__tooltip__body').text($tooltip);
                             }
                         }
                     );
                 }
             });
-        }
+        },
     };
 
     var checkJquery = function () {
