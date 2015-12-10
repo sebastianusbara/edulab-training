@@ -4,6 +4,7 @@
 
 .box__content {
 	margin: 0;
+	position: relative;
 }
 
 .box__content img {
@@ -13,6 +14,11 @@
 .box__desc {
 	padding: 5px 10px;
 	font-size: 14px;
+}
+
+.box__content__detail {
+	font-size: 14px;
+	margin: 10px 0;
 }
 
 .box__desc a {
@@ -27,12 +33,30 @@
 	margin: 20px 10px 20px 0;
 	border: 1px $black30 solid;
 	padding: 0;
+	min-height: 240px;
+
+	img {
+		min-height: 160px;
+	}
+}
+
+.box--detail {
+	border: 1px $black30 solid;
+	padding: 10px;
+	h3 {
+		margin: 0;
+	}
 }
 
 .box--wide {
 	width: 100%;
+	height: 160px;
 	margin: 10px 0;
 	position: relative;
+
+	img {
+		height: 160px;
+	}
 }
 
 .box--wide .box__desc {
@@ -46,17 +70,72 @@
 }
 
 .social {
-	padding: 10px 0;
+	padding: 0;
 	border-top: 1px $black30 solid;
 	border-bottom: 1px $black30 solid;
 }
 
 .social__item {
-	position: absolute;
+	position: relative;
+	display: block;
+	background: white;
+	padding: 10px 10px;
 	left: 0;
-	width: 33.33%;
-	height: 30px;
 	margin: 0;
 	border-right: 1px $black30 solid;
 	text-align: center;
+	color: $black50;
+}
+
+.box__head {
+	padding-top: 10px;
+	border-bottom: 1px solid $black30;
+	position: relative;
+}
+
+.box__head__list {
+	border-top: 1px solid $black30;
+	margin: 10px 0;
+	padding: 10px 0;
+}
+
+.box__info__list {
+	border-top: 1px solid $black30;
+	padding: 15px 5px;
+	vertical-align: middle;
+	
+	span {
+		color: $black60;
+		border: 1px solid $black30;
+		border-radius: 100%;
+		width: 35px;
+		height: 35px;
+		font-size: 20px;
+		text-align: center;
+		margin-right: 10px;
+		float: left;
+		padding-top: 7px;
+		margin-top: -5px;
+	}
+}
+
+.box__back {
+	position: absolute;
+	right: -25px;
+	top: -30px;
+	border-radius: 100%;
+	background: white;
+	border: 1px solid $black40;
+	height: 40px;
+	width: 40px;
+	font-size: 28px;
+	&:focus {
+		outline: 0;
+	}
+	&:hover {
+		background: whitesmoke;
+	}
+	span {
+		color: maroon;
+	}
 }

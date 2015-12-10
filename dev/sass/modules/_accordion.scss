@@ -24,11 +24,21 @@
 	display: inline-block;
 	float: right;
 	margin-top: -18px;
-	background: white;
 	padding: 10px 15px;
 	border: none;
+	&:focus {
+		outline: 0;
+	}
 }
 
 .accordion__active {
+	background: $yellow;
+}
+
+.btn--close {
+	background: white;
+}
+
+.btn--open {
 	background: $yellow;
 }

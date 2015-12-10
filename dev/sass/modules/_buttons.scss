@@ -41,9 +41,6 @@ $BTN_PADDING: $space/3 $space;
     &[disabled] {
         cursor: not-allowed;
     }
-    &:hover {
-        background: white;
-    }
 }
 
 
@@ -66,8 +63,8 @@ $BTN_PADDING: $space/3 $space;
     border: 1px solid $black30;
 }
 
-.btn--big {
-    padding: 10px 40px;
+.btn .btn--big {
+    padding: 10px 60px;
 }
 
 .btn--yellow {
@@ -80,6 +77,17 @@ $BTN_PADDING: $space/3 $space;
     &:hover {
         background: white;
         color: $light-brown;
+    }
+}
+
+.btn--default {
+    border: 2px solid $black40;
+    font-size: 14px;
+    font-weight: bold;
+    background: gainsboro;
+    &:hover {
+        background: white;
+        color: $black80;
     }
 }
 

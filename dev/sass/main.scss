@@ -295,7 +295,7 @@ a {
 }
 
 .gallery {
-    margin-top: -60px;
+    margin-top: 0px;
     margin-bottom: 50px;
 }
 
@@ -306,7 +306,7 @@ a {
 .gallery__title {
     color: $black70;
     font-weight: 300;
-    margin-bottom: 5px;
+    margin-bottom: 20px;
 }
 
 .gallery__content {
@@ -317,6 +317,39 @@ a {
 
 .gallery__pagination {
     border-top: 5px solid $yellow;
+}
+
+.alumni-form {
+    select {
+        float: none;
+        background: $pink;
+        margin-right: 20px;
+        margin-top: 20px;
+    }
+    legend {
+        display: block;
+        text-align: center;
+
+    }
+    .alumni-form__filter {
+        display: block;
+        text-align: center;
+    }
+    @media #{$large} {
+        select {
+            float: right;
+            margin-top: 0px;
+        }
+        legend {
+            float: left;
+            width: 39%;
+        }
+        .alumni-form__filter {
+            display: inline-block;
+            width: 60%;
+            float: right;
+        }
+    }
 }
 
 .pendampingan-list li {
@@ -403,12 +436,43 @@ a {
     margin: 0 60px 30px 0;
 }
 
-.daftar {
+.daftar__ganjil {
     padding-bottom: 40px;
+    transform: rotateY(180deg);
+    position: relative;
+    .daftar__number, .daftar__title, .daftar__desc, img {
+        transform: rotateY(180deg);
+    }
+    .daftar__number {
+        float: right;
+        right: 0;
+        margin: 30px 20px 0 20px;
+        @media #{$medium} {
+            margin: 20px 20px 100px 20px;
+        }
+    }
+    .daftar__title {
+        margin-right: 80px;
+    }
+    .daftar__desc {
+        margin-right: 0;
+        @media #{$large} {
+            margin-right: 80px;
+        }
+    }
 }
 
-.daftar2 {
+.daftar__genap {
     padding-top: 40px;
+
+    .daftar__number {
+        float: left;
+        right: 0;
+        margin: 30px 20px 0 20px;
+        @media #{$medium} {
+            margin: 20px 20px 100px 20px;
+        }
+    }
 }
 
 .daftar__number {
@@ -426,13 +490,6 @@ a {
     margin: 20px 0 0 0;
     @media #{$medium} {
         margin: 0px;
-    }
-}
-
-.daftar__desc {
-    margin-left: 0px;
-    @media #{$medium} {
-        margin-left: 60px;
     }
 }
 
@@ -482,11 +539,116 @@ a {
     padding-left: 10px;
 }
 
+.biaya {
+    position: relative;
+    margin-bottom: 30px;
+    text-align: center;
+    &:after {
+        position: absolute;
+        content: '';
+        height: 10px;
+        width: 100%;
+        background: url('../img/divider.jpg');
+        margin-bottom: -20px;
+        bottom: 0;
+        left: 0;
+    }
+}
+
+.biaya .biaya__list {
+    text-align: left;
+    margin-top: 10px;
+    margin-left: 30px;
+}
+
+.biaya__list li {
+    &:before {
+        position: absolute;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        content: '';
+        background:url('../img/check.jpg');
+        background-repeat: no-repeat;
+        display: inline-block;
+        padding-right: 40px;
+    }
+}
+
+.biaya__title {
+    padding: 10px 70px;
+    color: white;
+    text-align: center;
+    font-size: 18px;
+}
+
+.biaya__total {
+    text-align: center;
+    font-weight: bold;
+    color: $black50;
+    border-width: 1px 0 1px 0;
+    border-color: $black50;
+    border-style: solid;
+    padding: 5px 0;
+    margin: 20px 0;
+}
+
+.biaya__button {
+    text-align: center;
+    padding: 10px 50px;
+    margin-top: -5px;
+    position: relative;
+    z-index: 10;
+}
+
+.bimbingan {
+    text-align: center;
+    @media #{$medium} {
+        text-align: left;
+    }
+    legend {
+        font-weight: bold;
+        margin: 0;
+    }
+}
+
+.bimbingan__opt {
+    display: inline-block;
+    margin: 15px 0;
+    input[type=checkbox] + label {
+        background: $black30;
+        padding: 12px 15px;
+        color: $black80;
+        border-radius: 3px;
+        font-weight: 300;
+        border: 1px solid $black50;
+    } 
+    input[type=checkbox]:checked + label {
+        background: $green;
+        padding: 12px 15px;
+        color: white;
+        border-radius: 3px;
+        font-weight: 300;
+        span {
+            border-bottom: 2px solid white;
+        }
+    } 
+}
+
 .kontak-form {
     background: white;
+    position: relative;
     margin: 0 0 40px 0;
     @media #{$large} {
         margin: 0 20px 20px 0;
+    }
+    &:before {
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 50px;
+        background: url('../img/form-header.png');
+        background-repeat: repeat-x;
     }
 }
 

@@ -15,7 +15,8 @@
         _slickslider    : path.js + 'slick.min.js',
         _moment         : path.js + 'moment.min.js',
         _jqueryui       : path.js + 'jquery-ui.custom.min.js',
-        _fullcalendar   : path.js + 'fullcalendar.min.js'
+        _fullcalendar   : path.js + 'fullcalendar.min.js',
+        _lightbox       : path.js + 'lightbox.min.js'       
     };
 
     var Site = {
@@ -34,6 +35,9 @@
             Site.moment();
             Site.jqueryUI();
             Site.fullCalendar();
+            Site.boxBack();
+            Site.formValidation();
+            Site.lightBox();
 
             window.Site = Site;
         },
@@ -69,8 +73,9 @@
             
 
             $accordionHeader.on ( 'click', '.accordion__header__trigger' , function() {
-                $(this).parents('.accordion').find('.accordion__content').slideToggle();
+                $(this).parents('.accordion').find('.accordion__content').toggleClass('show hidden');
                 $(this).find($accordionIcon).toggleClass('fa-chevron-down fa-chevron-up');
+                $(this).toggleClass('btn--close btn--open');
             });
         }, 
 
@@ -255,6 +260,7 @@
                                 $end        = moment(event.end).format('DD');
                                 $tooltip    = event.tooltip;
 
+                                $('.calendar__tooltip').remove();
                                 $(this).after('<div class="calendar__tooltip"><div class="calendar__tooltip__head"></div><div class="calendar__tooltip__body"></div></div>');
                                 $('.calendar__tooltip__head').text($start + ' - ' + $end + ' ' + $monthyear );
                                 $('.calendar__tooltip__body').text($tooltip);
@@ -264,6 +270,65 @@
                 }
             });
         },
+
+        formValidation: function () {
+            var $input          = $( ".register .form-input");
+            var $inputKontak    = $( ".kontak-form .form-input");
+            var $submit         = $( "#daftar__button" );
+            var $submitKontak   = $( "#submit-kontak" );
+            var $err            = $( ".err-msg" );
+            var $checkbox       = $( ".register .bimbingan input");
+            
+
+            $submit.on( "click", function(e) {
+                $(".register .err-msg").remove();
+                $input.removeClass("form-input--success form-input--error");
+                $input.each(function(index, value){
+                    if ($.trim($input.eq(index).val()).length > 0) {
+                        $input.eq(index).addClass("form-input--success");
+                    } else if ($.trim($input.eq(index).val()).length === 0) {
+                        $input.eq(index).addClass("form-input--error");
+                        $input.eq(index).after('<div class="err-msg">This Field cannot left blank</div>');
+                        $(".form-input--error:first").focus();
+                        event.preventDefault(e);
+                    } 
+                });
+            });   
+
+            $submitKontak.on( "click", function(e) {
+                $(".kontak-form .err-msg").remove();
+                $inputKontak.removeClass("form-input--success form-input--error");
+                $inputKontak.each(function(index, value){
+                    if ($.trim($inputKontak.eq(index).val()).length > 0) {
+                        $inputKontak.eq(index).addClass("form-input--success");
+                    } else if ($.trim($inputKontak.eq(index).val()).length === 0) {
+                        $inputKontak.eq(index).addClass("form-input--error");
+                        $inputKontak.eq(index).after('<div class="err-msg">This Field cannot left blank</div>');
+                        $(".form-input--error:first").focus();
+                        event.preventDefault(e);
+                    } 
+                });
+            }); 
+        },
+
+        boxBack: function() {
+            $('.box__back').on ('click', function() {
+                window.history.back();
+            });
+        },
+
+        lightBox: function() {
+            Modernizr.load({
+                load    : assets._lightbox,
+                complete: function() {
+                    lightbox.option({
+                      'resizeDuration': 200,
+                      'wrapAround': true,
+                      'showImageNumberLabel': false,
+                  })
+                }
+            });
+        }
     };
 
     var checkJquery = function () {

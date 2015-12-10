@@ -193,3 +193,24 @@
 .plane-icon {
     padding: 30px 0;
 }
+
+.bg-gold {
+    background: $gold;
+}
+
+.bg-silver {
+    background: $silver;
+}
+
+.bg-copper {
+    background: $copper;
+}
+
+.link-underline {
+    text-decoration: underline;
+    color: $black80;
+    &:after {
+        content: ' > ';
+        text-decoration: underline;
+    }
+}

@@ -133,19 +133,39 @@
                             </select>
                         </div>
                         <div class="form__row">
-                            <label class="form-label">Hari Bimbingan</label>
-                            <button class="btn btn--active" value="senin">Sen</button>
-                            <button class="btn btn--active" value="selasa">Sel</button>
-                            <button class="btn btn--active" value="rabu">Rab</button>
-                            <button class="btn btn--deactive" value="kamis">Kam</button>
-                            <button class="btn btn--active" value="jumat">Jum</button>
-                            <button class="btn btn--deactive" value="sabtu">Sab</button>
+                            <fieldset class="bimbingan">
+                                <legend>Hari Bimbingan</legend>
+                                <span class="bimbingan__opt">
+                                    <input id="senin" class="sr-only" type="checkbox" value="senin" checked>
+                                    <label class="bimbingan__check" for="senin"><span>Sen</span></label>
+                                </span>
+                                <span class="bimbingan__opt">
+                                    <input id="selasa" class="sr-only" type="checkbox" value="selasa" checked>
+                                    <label class="bimbingan__check" for="selasa"><span>Sel</span></label>
+                                </span>
+                                <span class="bimbingan__opt">
+                                    <input id="rabu" class="sr-only" type="checkbox" value="rabu" checked>
+                                    <label class="bimbingan__check" for="rabu"><span>Rab</span></label>
+                                </span>
+                                <span class="bimbingan__opt">
+                                    <input id="kamis" class="sr-only" type="checkbox" value="kamis">
+                                    <label class="bimbingan__check" for="kamis"><span>Kam</span></label>
+                                </span>
+                                <span class="bimbingan__opt">
+                                    <input id="jumat" class="sr-only" type="checkbox" value="jumat" checked>
+                                    <label class="bimbingan__check" for="jumat"><span>Jum</span></label>
+                                </span>
+                                <span class="bimbingan__opt">
+                                    <input id="sabtu" class="sr-only" type="checkbox" value="sabtu">
+                                    <label class="bimbingan__check" for="sabtu"><span>Sab</span></label>
+                                </span>
+                            </fieldset>
                         </div>
                     </fieldset>
                     <fieldset class="form__footer">
                         <div class="form__row">
-                            <button class="btn btn--big btn--yellow">Batal</button>
-                            <button class="btn btn--big btn--default">Daftar</button>
+                            <button type="reset" class="btn btn--big btn--default">Batal</button>
+                            <button type="submit" class="btn btn--big btn--yellow" id="daftar__button">Daftar</button>
                         </div>
                     </fieldset>
                 </form>
