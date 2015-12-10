@@ -120,7 +120,8 @@
 .compact {
     width: 100%;
     @media #{$large} {
-        width: 83%;
+        width: calc(100% - 230px);
+        margin-left: 230px;
     }
 }
 
@@ -133,6 +134,7 @@
     width: 100%;
     @media #{$large} {
         width: 70%;
+        margin-bottom: 30px;
     }
 }
 

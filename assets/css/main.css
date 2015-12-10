@@ -444,7 +444,9 @@ input[type="search"] {
 
 @media screen and (min-width: 60em) {
   .compact {
-    width: 83%;
+    width: -webkit-calc(100% - 230px);
+    width: calc(100% - 230px);
+    margin-left: 230px;
   }
 }
 
@@ -460,6 +462,7 @@ input[type="search"] {
 @media screen and (min-width: 60em) {
   .layout-narrow {
     width: 70%;
+    margin-bottom: 30px;
   }
 }
 
@@ -1666,7 +1669,7 @@ input[type="number"] {
 
 @media screen and (min-width: 60em) {
   .nav {
-    max-width: 17%;
+    width: 230px;
   }
 }
 
@@ -1678,7 +1681,7 @@ input[type="number"] {
   position: fixed;
   float: none;
   background: black;
-  height: 30px;
+  height: 0;
   z-index: 10;
 }
 
@@ -1696,10 +1699,12 @@ input[type="number"] {
   padding: 10px 10px;
   text-align: left;
   height: 50px;
+  margin-top: -50px;
 }
 
 @media screen and (min-width: 60em) {
   .nav__header {
+    margin-top: -10px;
     height: auto;
     text-align: center;
     padding: 35px 10px;
@@ -6295,6 +6300,7 @@ html {
 
 body {
   color: #3c3c3c;
+  background: whitesmoke;
 }
 
 a {
@@ -6317,7 +6323,6 @@ a:hover, a:focus {
 }
 
 .main-content {
-  float: right;
   background: whitesmoke;
   margin-top: 50px;
 }
@@ -6326,12 +6331,6 @@ a:hover, a:focus {
   .main-content {
     margin-top: 0;
   }
-}
-
-.main-content article {
-  float: right;
-  padding-top: 15px;
-  width: 100%;
 }
 
 .main__program {
@@ -6384,6 +6383,8 @@ a:hover, a:focus {
 .post__title, .gallery__title, .post__heading {
   color: #6f6f6f;
   font-weight: 300;
+  position: relative;
+  top: 10px;
 }
 
 .post__heading {

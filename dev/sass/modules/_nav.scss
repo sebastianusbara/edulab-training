@@ -7,7 +7,7 @@
 	}
 
     @media #{$large} {
-    	max-width: 17%;
+    	width: 230px;
     }
 }
 
@@ -22,7 +22,7 @@
 	position: fixed;
 	float: none;
 	background: black;
-	height: 30px;
+	height: 0;
 	z-index: 10;
 
    	@media #{$large} {
@@ -38,7 +38,9 @@
 	padding: 10px 10px;
 	text-align: left;
 	height: 50px;
+	margin-top: -50px;
 	@media #{$large} {
+		margin-top: -10px;
 		height: auto;
 	    text-align: center;
 	    padding: 35px 10px;
