@@ -374,29 +374,6 @@ a {
     }
 }
 
-.class-list {
-    margin-left: 0px;
-    @media #{$medium} {
-        margin-left: 10px;
-    }
-}
-
-.class-list li {
-    position: relative;
-    padding-left: 30px;
-    &:before {
-        position: absolute;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        content: '';
-        background:url('../img/check.jpg');
-        background-repeat: no-repeat;
-        display: inline-block;
-        padding-right: 40px;
-    }
-}
-
 .program-list li {
     padding-right: 40px;
     text-align: center;
@@ -492,10 +469,6 @@ a {
     }
 }
 
-.daftar__number {
-
-}
-
 .daftar__title {
     margin: 20px 0 0 0;
     @media #{$medium} {
@@ -563,25 +536,11 @@ a {
         bottom: 0;
         left: 0;
     }
-}
-
-.biaya .biaya__list {
-    text-align: left;
-    margin-top: 10px;
-    margin-left: 30px;
-}
-
-.biaya__list li {
-    &:before {
-        position: absolute;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        content: '';
-        background:url('../img/check.jpg');
-        background-repeat: no-repeat;
-        display: inline-block;
-        padding-right: 40px;
+    .yellow-list {
+        margin-top: 10px;
+        li {
+            text-align: left;
+        }
     }
 }
 

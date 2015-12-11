@@ -1,0 +1,22 @@
+.yellow-list {
+    margin-left: 0px;
+    @media #{$medium} {
+        margin-left: 10px;
+    }
+}
+
+.yellow-list li {
+    position: relative;
+    padding-left: 30px;
+    &:before {
+        position: absolute;
+        left: 0;
+        width: 25px;
+        height: 25px;
+        content: '';
+        background:url('../img/check.jpg');
+        background-repeat: no-repeat;
+        display: inline-block;
+        padding-right: 40px;
+    }
+}

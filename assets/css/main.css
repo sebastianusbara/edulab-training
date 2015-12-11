@@ -2335,6 +2335,33 @@ input[type="number"] {
   position: relative;
 }
 
+.yellow-list {
+  margin-left: 0px;
+}
+
+@media screen and (min-width: 48em) {
+  .yellow-list {
+    margin-left: 10px;
+  }
+}
+
+.yellow-list li {
+  position: relative;
+  padding-left: 30px;
+}
+
+.yellow-list li:before {
+  position: absolute;
+  left: 0;
+  width: 25px;
+  height: 25px;
+  content: '';
+  background: url("../img/check.jpg");
+  background-repeat: no-repeat;
+  display: inline-block;
+  padding-right: 40px;
+}
+
 /*!
  *  Font Awesome 4.3.0 by @davegandy - http://fontawesome.io - @fontawesome
  *  License - http://fontawesome.io/license (Font: SIL OFL 1.1, CSS: MIT License)
@@ -6685,33 +6712,6 @@ a:hover, a:focus {
   display: inline-block;
 }
 
-.class-list {
-  margin-left: 0px;
-}
-
-@media screen and (min-width: 48em) {
-  .class-list {
-    margin-left: 10px;
-  }
-}
-
-.class-list li {
-  position: relative;
-  padding-left: 30px;
-}
-
-.class-list li:before {
-  position: absolute;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  content: '';
-  background: url("../img/check.jpg");
-  background-repeat: no-repeat;
-  display: inline-block;
-  padding-right: 40px;
-}
-
 .program-list li {
   padding-right: 40px;
   text-align: center;
@@ -6900,22 +6900,12 @@ a:hover, a:focus {
   left: 0;
 }
 
-.biaya .biaya__list {
-  text-align: left;
+.biaya .yellow-list {
   margin-top: 10px;
-  margin-left: 30px;
 }
 
-.biaya__list li:before {
-  position: absolute;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  content: '';
-  background: url("../img/check.jpg");
-  background-repeat: no-repeat;
-  display: inline-block;
-  padding-right: 40px;
+.biaya .yellow-list li {
+  text-align: left;
 }
 
 .biaya__title {
