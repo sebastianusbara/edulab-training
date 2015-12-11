@@ -32,8 +32,6 @@
             Site.minatTabs();
             Site.buttonForm();
             Site.slickSlider();
-            Site.moment();
-            Site.jqueryUI();
             Site.fullCalendar();
             Site.boxBack();
             Site.formValidation();
@@ -138,6 +136,10 @@
         },
 
         slickSlider: function () {
+            var $slider = $('.main__slider');
+            var $slider2 = $('.post__slider');
+            if(!$slider.length && !$slider2.length) return;
+
             Modernizr.load({
                 load    : assets._slickslider,
                 complete: function () {
@@ -163,29 +165,27 @@
             });
         },
 
-        moment: function () {
-            Modernizr.load({
-                load    : assets._moment,
-                complete: function() {
-
-                }
-            });
-        },
-
-        jqueryUI: function () {
-            Modernizr.load({
-                load    : assets._jqueryui,
-                complete: function() {
-                    
-                }
-            });
-        },
-
         fullCalendar: function () {
-            Modernizr.load({
+            var $calendar = $('#calendar');
+            if(!$calendar.length) return;
+
+            Modernizr.load([
+              {
+                load    : assets._moment,
+                complete: function () {
+
+              }
+              },
+              {
+                load    : assets._jqueryui,
+                complete: function () {
+
+                }
+              },
+              {
                 load    : assets._fullcalendar,
                 complete: function() {
-                    $('#calendar').fullCalendar(
+                    $('#calendar').fullCalendar (
                         {
                             header: {
                                 left: 'title',
@@ -268,7 +268,8 @@
                         }
                     );
                 }
-            });
+              }
+            ]);
         },
 
         formValidation: function () {
