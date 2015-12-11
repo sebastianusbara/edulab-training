@@ -2283,9 +2283,9 @@ input[type="number"] {
   height: 150px;
   -webkit-box-shadow: 2px 2px 20px 2px #6f6f6f;
           box-shadow: 2px 2px 20px 2px #6f6f6f;
-  position: relative;
+  position: absolute;
   z-index: 10;
-  top: -200px;
+  top: -170px;
   left: 50%;
   margin-left: -130px;
   padding: 0;
@@ -2329,6 +2329,10 @@ input[type="number"] {
 
 .fc-body .fc-row {
   overflow: visible !important;
+}
+
+.fc-event-container {
+  position: relative;
 }
 
 /*!
@@ -6505,6 +6509,7 @@ a:hover, a:focus {
   text-align: center;
   padding: 5px;
   margin: 20px;
+  float: right;
 }
 
 .post__content__title {
@@ -6974,6 +6979,7 @@ a:hover, a:focus {
           border-radius: 3px;
   font-weight: 300;
   border: 1px solid #a2a2a2;
+  cursor: pointer;
 }
 
 .bimbingan__opt input[type=checkbox]:checked + label {

@@ -133,9 +133,9 @@
 	background: $cream;
 	height: 150px;
 	box-shadow: 2px 2px 20px 2px $black70;
-	position: relative;
+	position: absolute;
 	z-index: 10;
-	top: -200px;
+	top: -170px;
 	left: 50%;
 	margin-left: -130px;
 	padding: 0;
@@ -175,4 +175,8 @@
 
 .fc-body .fc-row {
 	overflow: visible!important;
+}
+
+.fc-event-container {
+	position: relative;
 }

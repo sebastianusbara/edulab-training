@@ -261,7 +261,7 @@
                                 $tooltip    = event.tooltip;
 
                                 $('.calendar__tooltip').remove();
-                                $(this).after('<div class="calendar__tooltip"><div class="calendar__tooltip__head"></div><div class="calendar__tooltip__body"></div></div>');
+                                $(this).before('<div class="calendar__tooltip show"><div class="calendar__tooltip__head"></div><div class="calendar__tooltip__body"></div></div>');
                                 $('.calendar__tooltip__head').text($start + ' - ' + $end + ' ' + $monthyear );
                                 $('.calendar__tooltip__body').text($tooltip);
                             }

@@ -216,6 +216,7 @@ a {
     text-align: center;
     padding: 5px;
     margin: 20px;
+    float:right;
 }
 
 .post__content__title {
@@ -624,6 +625,7 @@ a {
         border-radius: 3px;
         font-weight: 300;
         border: 1px solid $black50;
+        cursor: pointer;
     } 
     input[type=checkbox]:checked + label {
         background: $green;
