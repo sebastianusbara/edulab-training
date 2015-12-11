@@ -29,13 +29,13 @@
             Site.toggleButton();
             Site.toggleSubmenu();
             Site.toggleSidebar();
-            Site.minatTabs();
             Site.buttonForm();
             Site.slickSlider();
             Site.fullCalendar();
             Site.boxBack();
             Site.formValidation();
             Site.lightBox();
+            Site.minatTabs();
 
             window.Site = Site;
         },
@@ -104,21 +104,14 @@
         },
 
         minatTabs: function () {
-            var $toggleTalent = $('.talent-tab');
-            var $toggleFinger = $('.fingerprint-tab');
+            var $toggleMinat = $('.post__tabs li');
+            var $postTabs = $('.post__tabs');
 
-            $toggleTalent.on ( 'click', function() {
+            $('.post__tabs li').on( 'click', function() {
                 $(this).parents('.post__tabs').find('.post__tabs__active').removeClass('post__tabs__active off-click');
-                $(this).parent().addClass('post__tabs__active off-click');
+                $(this).addClass('post__tabs__active off-click');
                 $(this).parents('.post__tabs').siblings('.talent').toggleClass('show hidden');
                 $(this).parents('.post__tabs').siblings('.fingerprint').toggleClass('show hidden');
-            });
-
-            $toggleFinger.on ( 'click', function() {
-                $(this).parents('.post__tabs').find('.post__tabs__active').removeClass('post__tabs__active off-click');
-                $(this).parent().addClass('post__tabs__active off-click');
-                $(this).parents('.post__tabs').siblings('.fingerprint').toggleClass('show hidden');
-                $(this).parents('.post__tabs').siblings('.talent').toggleClass('show hidden');
             });
         },
 
@@ -187,9 +180,9 @@
                                 defaultDate: '2013-09-01',
                                 editable: true,
                                 eventLimit: true, // allow "more" link when too many events
-                                dayNames: [ 'Minggu', 'Senin', 'Selasa', 'Rabu', 'Kamis', 'Jumat', 'Sabtu'],
+                                dayNames: json.dayNames,
                                 dayNamesShort: ['Minggu', 'Senin', 'Selasa', 'Rabu', 'Kamis', 'Jumat', 'Sabtu'],
-                                events: json,
+                                events: json.events,
 
                                 eventClick: function(event) {
                                     var $start      = moment(event.start).format('DD');
