@@ -167,106 +167,48 @@
 
         fullCalendar: function () {
             var $calendar = $('#calendar');
-            if(!$calendar.length) return;
+            if( !$calendar.length ) return;
 
             Modernizr.load([
               {
                 load    : assets._moment,
-                complete: function () {
-
-              }
               },
               {
                 load    : assets._jqueryui,
-                complete: function () {
-
-                }
               },
               {
                 load    : assets._fullcalendar,
                 complete: function() {
-                    $('#calendar').fullCalendar (
-                        {
-                            header: {
-                                left: 'title',
-                                right: 'prev, next'
-                            },
-                            firstDay: 1,
-                            defaultDate: '2013-09-01',
-                            editable: true,
-                            eventLimit: true, // allow "more" link when too many events
-                            dayNames: [ 'Minggu', 'Senin', 'Selasa', 'Rabu', 'Kamis', 'Jumat', 'Sabtu'],
-                            dayNamesShort: ['Minggu', 'Senin', 'Selasa', 'Rabu', 'Kamis', 'Jumat', 'Sabtu'],
-                            events: [
-                                {
-                                    className: 'fc-green',
-                                    start: '2013-09-02',
-                                    end: '2013-09-08',
-                                    tooltip: 'Masa Pengajuan penundaan / keringanan / cicilan Biaya Pendidikan Semester Gasal 2013/2014'
+                    var $events = $calendar.attr('events-data');
+                        $.getJSON( $events, function(json, textStatus) {
+                            $('#calendar').fullCalendar (
+                            {
+                                header: {
+                                    left: 'title',
+                                    right: 'prev, next'
                                 },
-                                {
-                                    className: 'fc-pink',
-                                    start: '2013-09-02',
-                                    end: '2013-09-04',
-                                    tooltip: 'Masa Pengajuan penundaan / keringanan / cicilan Biaya Pendidikan Semester Gasal 2013/2014'
-                                },
-                                {
-                                    className: 'fc-blue',
-                                    start: '2013-09-02',
-                                    end: '2013-09-04',
-                                    tooltip: 'Masa Pengajuan penundaan / keringanan / cicilan Biaya Pendidikan Semester Gasal 2013/2014'
-                                },
-                                {
-                                    className: 'fc-green',
-                                    start: '2013-09-09',
-                                    end: '2013-09-12',
-                                    tooltip: 'Masa Pengajuan penundaan / keringanan / cicilan Biaya Pendidikan Semester Gasal 2013/2014'
-                                },
-                                {
-                                    className: 'fc-pink',
-                                    start: '2013-09-12',
-                                    end: '2013-09-13',
-                                    tooltip: 'Masa Pengajuan penundaan / keringanan / cicilan Biaya Pendidikan Semester Gasal 2013/2014'
-                                },
-                                {
-                                    className: 'fc-blue',
-                                    start: '2013-09-13',
-                                    end: '2013-09-15',
-                                    tooltip: 'Masa Pengajuan penundaan / keringanan / cicilan Biaya Pendidikan Semester Gasal 2013/2014'
-                                },
-                                {
-                                    className: 'fc-green',
-                                    start: '2013-09-16',
-                                    end: '2013-09-22',
-                                    tooltip: 'Masa Pengajuan penundaan / keringanan / cicilan Biaya Pendidikan Semester Gasal 2013/2014'
-                                },
-                                {
-                                    className: 'fc-blue',
-                                    start: '2013-09-17',
-                                    end: '2013-09-18',
-                                    tooltip: 'Masa Pengajuan penundaan / keringanan / cicilan Biaya Pendidikan Semester Gasal 2013/2014'
-                                },
-                                {
-                                    className: 'fc-pink',
-                                    start: '2013-09-30',
-                                    end: '2013-10-01',
-                                    tooltip: 'Masa Pengajuan penundaan / keringanan / cicilan Biaya Pendidikan Semester Gasal 2013/2014'
-                                },
-                            ],
+                                firstDay: 1,
+                                defaultDate: '2013-09-01',
+                                editable: true,
+                                eventLimit: true, // allow "more" link when too many events
+                                dayNames: [ 'Minggu', 'Senin', 'Selasa', 'Rabu', 'Kamis', 'Jumat', 'Sabtu'],
+                                dayNamesShort: ['Minggu', 'Senin', 'Selasa', 'Rabu', 'Kamis', 'Jumat', 'Sabtu'],
+                                events: json,
 
-                            eventClick: function(event) {
-                                var $start      = moment(event.start).format('DD');
-                                var $monthyear  = moment(event.end).format('MMMM YYYY');
-                                var $end        = moment(event.end).format('DD');
-                                var $tooltip    = event.tooltip;
+                                eventClick: function(event) {
+                                    var $start      = moment(event.start).format('DD');
+                                    var $monthyear  = moment(event.end).format('MMMM YYYY');
+                                    var $end        = moment(event.end).format('DD');
+                                    var $tooltip    = event.tooltip;
 
-                                $('.calendar__tooltip').remove();
-                                $(this).before('<div class="calendar__tooltip show"><div class="calendar__tooltip__head"></div><div class="calendar__tooltip__body"></div></div>');
-                                $('.calendar__tooltip__head').text($start + ' - ' + $end + ' ' + $monthyear );
-                                $('.calendar__tooltip__body').text($tooltip);
+                                    $('.calendar__tooltip').remove();
+                                    $(this).before('<div class="calendar__tooltip show"><div class="calendar__tooltip__head"></div><div class="calendar__tooltip__body"></div></div>');
+                                    $('.calendar__tooltip__head').text($start + ' - ' + $end + ' ' + $monthyear );
+                                    $('.calendar__tooltip__body').text($tooltip);
+                                }
                             }
-                        }
-                    );
+                        );
+                    });
                 }
               }
             ]);
