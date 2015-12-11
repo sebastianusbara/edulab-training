@@ -551,6 +551,20 @@ input[type="search"] {
   text-decoration: underline;
 }
 
+.no-border {
+  border: 0 !important;
+}
+
+dl {
+  margin: 0;
+  -webkit-margin-before: 0;
+  -webkit-margin-after: 0;
+}
+
+dl dd {
+  margin: 0;
+}
+
 @media print {
   * {
     background: transparent !important;
@@ -1417,7 +1431,8 @@ input[type="number"] {
 }
 
 .box__subtitle {
-  margin-bottom: 5px;
+  display: block;
+  margin-bottom: 10px;
 }
 
 .box--card {
@@ -1425,6 +1440,7 @@ input[type="number"] {
   border: 1px #d5d5d5 solid;
   padding: 0;
   min-height: 240px;
+  border-top: none;
 }
 
 .box--card img {
