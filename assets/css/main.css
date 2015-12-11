@@ -6951,16 +6951,6 @@ a:hover, a:focus {
   z-index: 10;
 }
 
-.bimbingan {
-  text-align: center;
-}
-
-@media screen and (min-width: 48em) {
-  .bimbingan {
-    text-align: left;
-  }
-}
-
 .bimbingan legend {
   font-weight: bold;
   margin: 0;

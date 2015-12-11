@@ -605,10 +605,6 @@ a {
 }
 
 .bimbingan {
-    text-align: center;
-    @media #{$medium} {
-        text-align: left;
-    }
     legend {
         font-weight: bold;
         margin: 0;
