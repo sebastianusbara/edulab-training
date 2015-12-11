@@ -565,6 +565,11 @@ dl dd {
   margin: 0;
 }
 
+.off-click {
+  pointer-events: none;
+  cursor: default;
+}
+
 @media print {
   * {
     background: transparent !important;

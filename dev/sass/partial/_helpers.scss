@@ -229,3 +229,8 @@ dl {
     margin: 0; 
     }
 }
+
+.off-click {
+   pointer-events: none;
+   cursor: default;
+}

@@ -106,23 +106,19 @@
         minatTabs: function () {
             var $toggleTalent = $('.talent-tab');
             var $toggleFinger = $('.fingerprint-tab');
-            
+
             $toggleTalent.on ( 'click', function() {
-                $(this).parents('.post__tabs').siblings('.fingerprint').removeClass('show');
-                $(this).parents('.post__tabs').siblings('.fingerprint').addClass('hidden');
-                $(this).parents('.post__tabs').siblings('.talent').removeClass('hidden');
-                $(this).parents('.post__tabs').siblings('.talent').addClass('show');
-                $(this).parents('.post__tabs').find('.post__tabs__active').removeClass('post__tabs__active');
-                $(this).parent().addClass('post__tabs__active');
+                $(this).parents('.post__tabs').find('.post__tabs__active').removeClass('post__tabs__active off-click');
+                $(this).parent().addClass('post__tabs__active off-click');
+                $(this).parents('.post__tabs').siblings('.talent').toggleClass('show hidden');
+                $(this).parents('.post__tabs').siblings('.fingerprint').toggleClass('show hidden');
             });
 
             $toggleFinger.on ( 'click', function() {
-                $(this).parents('.post__tabs').siblings('.talent').removeClass('show');
-                $(this).parents('.post__tabs').siblings('.talent').addClass('hidden');
-                $(this).parents('.post__tabs').siblings('.fingerprint').removeClass('hidden');
-                $(this).parents('.post__tabs').siblings('.fingerprint').addClass('show');
-                $(this).parents('.post__tabs').find('.post__tabs__active').removeClass('post__tabs__active');
-                $(this).parent().addClass('post__tabs__active');
+                $(this).parents('.post__tabs').find('.post__tabs__active').removeClass('post__tabs__active off-click');
+                $(this).parent().addClass('post__tabs__active off-click');
+                $(this).parents('.post__tabs').siblings('.fingerprint').toggleClass('show hidden');
+                $(this).parents('.post__tabs').siblings('.talent').toggleClass('show hidden');
             });
         },
 
