@@ -449,29 +449,33 @@ a {
     margin: 0 60px 30px 0;
 }
 
+.daftar {
+    counter-reset: custom-counter;
+}
+
+.daftar__title {
+    counter-increment: custom-counter;
+    &:before {
+        content: "#" counter(custom-counter);
+        float: left;
+        font-size: 36px;
+        color: $yellow;
+        margin-top: 10px;
+        margin-right: 20px;
+        margin-bottom: 10px;
+        font-weight: 300;
+        @media #{$medium} {
+            margin-bottom: 200px;
+        }
+    }
+}
+
 .daftar__ganjil {
     padding-bottom: 40px;
     transform: rotateY(180deg);
     position: relative;
-    .daftar__number, .daftar__title, .daftar__desc, img {
+    &:before, .daftar__title, .daftar__desc, img {
         transform: rotateY(180deg);
-    }
-    .daftar__number {
-        float: right;
-        right: 0;
-        margin: 30px 20px 0 20px;
-        @media #{$medium} {
-            margin: 20px 20px 100px 20px;
-        }
-    }
-    .daftar__title {
-        margin-right: 80px;
-    }
-    .daftar__desc {
-        margin-right: 0;
-        @media #{$large} {
-            margin-right: 80px;
-        }
     }
 }
 
@@ -489,14 +493,7 @@ a {
 }
 
 .daftar__number {
-    float:left;
-    font-size: 36px;
-    color: $yellow;
-    margin-top: 35px;
-    margin-right: 20px;
-    @media #{$medium} {
-        margin-top: 10px;
-    }
+
 }
 
 .daftar__title {

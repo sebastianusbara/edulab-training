@@ -6765,6 +6765,31 @@ a:hover, a:focus {
   margin: 0 60px 30px 0;
 }
 
+.daftar {
+  counter-reset: custom-counter;
+}
+
+.daftar__title {
+  counter-increment: custom-counter;
+}
+
+.daftar__title:before {
+  content: "#" counter(custom-counter);
+  float: left;
+  font-size: 36px;
+  color: #ffcf00;
+  margin-top: 10px;
+  margin-right: 20px;
+  margin-bottom: 10px;
+  font-weight: 300;
+}
+
+@media screen and (min-width: 48em) {
+  .daftar__title:before {
+    margin-bottom: 200px;
+  }
+}
+
 .daftar__ganjil {
   padding-bottom: 40px;
   -webkit-transform: rotateY(180deg);
@@ -6772,35 +6797,9 @@ a:hover, a:focus {
   position: relative;
 }
 
-.daftar__ganjil .daftar__number, .daftar__ganjil .daftar__title, .daftar__ganjil .daftar__desc, .daftar__ganjil img {
+.daftar__ganjil:before, .daftar__ganjil .daftar__title, .daftar__ganjil .daftar__desc, .daftar__ganjil img {
   -webkit-transform: rotateY(180deg);
           transform: rotateY(180deg);
-}
-
-.daftar__ganjil .daftar__number {
-  float: right;
-  right: 0;
-  margin: 30px 20px 0 20px;
-}
-
-@media screen and (min-width: 48em) {
-  .daftar__ganjil .daftar__number {
-    margin: 20px 20px 100px 20px;
-  }
-}
-
-.daftar__ganjil .daftar__title {
-  margin-right: 80px;
-}
-
-.daftar__ganjil .daftar__desc {
-  margin-right: 0;
-}
-
-@media screen and (min-width: 60em) {
-  .daftar__ganjil .daftar__desc {
-    margin-right: 80px;
-  }
 }
 
 .daftar__genap {
@@ -6816,20 +6815,6 @@ a:hover, a:focus {
 @media screen and (min-width: 48em) {
   .daftar__genap .daftar__number {
     margin: 20px 20px 100px 20px;
-  }
-}
-
-.daftar__number {
-  float: left;
-  font-size: 36px;
-  color: #ffcf00;
-  margin-top: 35px;
-  margin-right: 20px;
-}
-
-@media screen and (min-width: 48em) {
-  .daftar__number {
-    margin-top: 10px;
   }
 }
 
