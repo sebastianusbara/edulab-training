@@ -255,10 +255,10 @@
                             ],
 
                             eventClick: function(event) {
-                                $start      = moment(event.start).format('DD');
-                                $monthyear  = moment(event.end).format('MMMM YYYY');
-                                $end        = moment(event.end).format('DD');
-                                $tooltip    = event.tooltip;
+                                var $start      = moment(event.start).format('DD');
+                                var $monthyear  = moment(event.end).format('MMMM YYYY');
+                                var $end        = moment(event.end).format('DD');
+                                var $tooltip    = event.tooltip;
 
                                 $('.calendar__tooltip').remove();
                                 $(this).before('<div class="calendar__tooltip show"><div class="calendar__tooltip__head"></div><div class="calendar__tooltip__body"></div></div>');
