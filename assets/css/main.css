@@ -7108,51 +7108,52 @@ a:hover, a:focus {
 
 .sidebar {
   margin-top: 20px;
+  position: relative;
 }
 
-.sidebar__header {
+.sidebar__heading {
   position: relative;
   margin-bottom: 20px;
-  font-size: 12px;
+  font-size: 16px;
 }
 
-.sidebar__header:after {
+.sidebar__heading:after {
   position: absolute;
   top: 100%;
+  left: 0;
   content: '';
   width: 100%;
   height: 10px;
   background: url("../img/divider.jpg");
 }
 
-.sidebar__header h3 {
-  margin: 0;
-  font-size: 16px;
-}
-
-@media screen and (min-width: 48em) {
-  .sidebar__header h3 {
-    font-size: 12px;
-  }
-}
-
 @media screen and (min-width: 60em) {
-  .sidebar__header h3 {
-    font-size: 16px;
+  .sidebar__heading {
+    font-size: 13px;
   }
 }
 
-.sidebar__header__link a {
+.sidebar__all {
+  position: absolute;
+  top: -5px;
+  right: 0;
   color: #555555;
   text-transform: uppercase;
+  font-size: 14px;
 }
 
-.sidebar__header__link a:hover {
+.sidebar__all:hover {
   color: #0074ba;
 }
 
-.sidebar__header__link span {
+.sidebar__all span {
   margin-left: 2px;
+}
+
+@media screen and (min-width: 48em) {
+  .sidebar__all {
+    font-size: 13px;
+  }
 }
 
 .sidebar__list li {
