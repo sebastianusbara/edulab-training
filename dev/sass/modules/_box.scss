@@ -1,5 +1,11 @@
 .box {
 	background: white;
+	img {
+		object-fit: cover;
+	}
+	a {
+		color: $black;
+	}
 }
 
 .box__content {
