@@ -6520,16 +6520,24 @@ a:hover, a:focus {
   width: 100%;
   text-align: center;
   float: left;
-  background: white;
   padding: 10px 10px 5px 10px;
   margin-right: 20px;
   margin-bottom: 20px;
+  position: relative;
+  padding-bottom: 75%;
+  height: 0;
+  overflow: hidden;
+  border: 8px solid white;
+  -webkit-border-radius: 5px;
+          border-radius: 5px;
 }
 
-@media screen and (min-width: 48em) {
-  .post__content__map {
-    width: auto;
-  }
+.post__content__map iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100% !important;
+  height: 100% !important;
 }
 
 .post__summary {

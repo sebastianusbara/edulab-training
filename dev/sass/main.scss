@@ -227,12 +227,22 @@ a {
     width: 100%;
     text-align: center;
     float: left;
-    background: white;
     padding: 10px 10px 5px 10px;
     margin-right: 20px;
     margin-bottom: 20px;
-    @media #{$medium} {
-        width: auto;
+    position: relative;
+    padding-bottom: 75%; // This is the aspect ratio
+    height: 0;
+    overflow: hidden;
+    border: 8px solid white;
+    border-radius: 5px;
+
+    iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100% !important;
+        height: 100% !important;
     }
 }
 
