@@ -194,10 +194,8 @@
         },
 
         formValidation: function () {
-            var $input          = $( ".register .form-input");
-            var $inputKontak    = $( ".kontak-form .form-input");
-            var $submit         = $( "#daftar__button" );
-            var $submitKontak   = $( "#submit-kontak" );
+            var $input          = $( "form .form-input");
+            var $submit         = $( "button:submit" );
             var $err            = $( ".err-msg" );
             var $checkbox       = $( ".register .bimbingan input");
             
@@ -216,21 +214,6 @@
                     } 
                 });
             });   
-
-            $submitKontak.on( "click", function(e) {
-                $(".kontak-form .err-msg").remove();
-                $inputKontak.removeClass("form-input--success form-input--error");
-                $inputKontak.each(function(index, value){
-                    if ($.trim($inputKontak.eq(index).val()).length > 0) {
-                        $inputKontak.eq(index).addClass("form-input--success");
-                    } else if ($.trim($inputKontak.eq(index).val()).length === 0) {
-                        $inputKontak.eq(index).addClass("form-input--error");
-                        $inputKontak.eq(index).after('<div class="err-msg">This Field cannot left blank</div>');
-                        $(".form-input--error:first").focus();
-                        event.preventDefault(e);
-                    } 
-                });
-            }); 
         },
 
         boxBack: function() {
