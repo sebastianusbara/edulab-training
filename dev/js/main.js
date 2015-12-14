@@ -106,11 +106,11 @@
             var $toggleMinat = $('.post__tabs li');
             var $postTabs = $('.post__tabs');
 
-            $('.post__tabs li').on( 'click', function() {
-                $(this).parents('.post__tabs').find('.post__tabs__active').removeClass('post__tabs__active off-click');
+            $toggleMinat.on( 'click', function() {
+                $(this).parents($postTabs).find('.post__tabs__active').removeClass('post__tabs__active off-click');
                 $(this).addClass('post__tabs__active off-click');
-                $(this).parents('.post__tabs').siblings('.talent').toggleClass('show hidden');
-                $(this).parents('.post__tabs').siblings('.fingerprint').toggleClass('show hidden');
+                $(this).parents($postTabs).siblings('.talent').toggleClass('show hidden');
+                $(this).parents($postTabs).siblings('.fingerprint').toggleClass('show hidden');
             });
         },
 
