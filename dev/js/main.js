@@ -208,7 +208,7 @@
                 $("form .err-msg").remove();
                 $input.removeClass("form-input--success form-input--error");
                 $input.each(function(index, value){
-                    if ($.trim($input.eq(index).val()).length > 0 && $checkbox.prop('checked') == true) {
+                    if ($.trim($input.eq(index).val()).length > 0 && $checkbox.prop('checked') === true) {
                         $input.eq(index).addClass("form-input--success");
                     } else if ($.trim($input.eq(index).val()).length === 0) {
                         $input.eq(index).addClass("form-input--error");
