@@ -101,19 +101,19 @@
                     <fieldset class="register__input">
                         <div class="form__row">
                             <label for="nama" class="form-label">Nama Lengkap</label>
-                            <input id="nama" type="text" class="form-input form-input--block">
+                            <input id="nama" type="text" class="form-input form-input--block" messages-data="This field cannot left blank">
                         </div>
                         <div class="form__row">
                             <label for="lahir" class="form-label">Tanggal Lahir</label>
-                            <input id="lahir" type="date" class="form-input form-input--block">
+                            <input id="lahir" type="date" class="form-input form-input--block" messages-data="This field cannot left blank">
                         </div>
                         <div class="form__row">
                             <label for="sekolah" class="form-label">Asal Sekolah</label>
-                            <input id="sekolah" type="text" class="form-input form-input--block">
+                            <input id="sekolah" type="text" class="form-input form-input--block" messages-data="This field cannot left blank">
                         </div>
                         <div class="form__row">
                             <label for="program" class="form-label">Program Belajar</label>
-                            <select name="program-belajar" id="program" class="form-input--block">
+                            <select name="program-belajar" id="program" class="form-input--block" messages-data="This field cannot left blank">
                                 <option value="1">President Class</option>
                                 <option value="2">Suite Class</option>
                                 <option value="3">Deluxe Class</option>
@@ -123,29 +123,30 @@
                             <fieldset class="bimbingan">
                                 <legend>Hari Bimbingan</legend>
                                 <span class="bimbingan__opt">
-                                    <input id="senin" class="sr-only" type="checkbox" value="senin" checked>
+                                    <input id="senin" name="bimbingan" class="sr-only" type="checkbox" value="senin" checked>
                                     <label class="bimbingan__check" for="senin"><span>Sen</span></label>
                                 </span>
                                 <span class="bimbingan__opt">
-                                    <input id="selasa" class="sr-only" type="checkbox" value="selasa" checked>
+                                    <input id="selasa" name="bimbingan" class="sr-only" type="checkbox" value="selasa" checked>
                                     <label class="bimbingan__check" for="selasa"><span>Sel</span></label>
                                 </span>
                                 <span class="bimbingan__opt">
-                                    <input id="rabu" class="sr-only" type="checkbox" value="rabu" checked>
+                                    <input id="rabu" name="bimbingan" class="sr-only" type="checkbox" value="rabu" checked>
                                     <label class="bimbingan__check" for="rabu"><span>Rab</span></label>
                                 </span>
                                 <span class="bimbingan__opt">
-                                    <input id="kamis" class="sr-only" type="checkbox" value="kamis">
+                                    <input id="kamis" name="bimbingan" class="sr-only" type="checkbox" value="kamis">
                                     <label class="bimbingan__check" for="kamis"><span>Kam</span></label>
                                 </span>
                                 <span class="bimbingan__opt">
-                                    <input id="jumat" class="sr-only" type="checkbox" value="jumat" checked>
+                                    <input id="jumat" name="bimbingan" class="sr-only" type="checkbox" value="jumat" checked>
                                     <label class="bimbingan__check" for="jumat"><span>Jum</span></label>
                                 </span>
                                 <span class="bimbingan__opt">
-                                    <input id="sabtu" class="sr-only" type="checkbox" value="sabtu">
+                                    <input id="sabtu" name="bimbingan" class="sr-only" type="checkbox" value="sabtu">
                                     <label class="bimbingan__check" for="sabtu"><span>Sab</span></label>
                                 </span>
+                                <div class="err-opt" messages-data="Please Choose at Least 1"></div>
                             </fieldset>
                         </div>
                     </fieldset>

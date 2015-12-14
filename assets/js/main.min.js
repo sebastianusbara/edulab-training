@@ -194,24 +194,31 @@
         },
 
         formValidation: function () {
-            var $input          = $( "form .form-input");
-            var $submit         = $( "button:submit" );
-            var $err            = $( ".err-msg" );
-            var $checkbox       = $( ".register .bimbingan input");
+            var $input          = $("form .form-input");
+            var $submit         = $("button:submit");
+            var $err            = $(".err-msg");
+            var $errMsg         = $(".form-input").attr('messages-data');
+            var $checkbox       = $("input[name='bimbingan']");
+            var $checkboxErr    = $(".err-opt");
+            var $checkboxMsg    = $(".err-opt").attr('messages-data');
             
 
             $submit.on( "click", function(e) {
                 $(".register .err-msg").remove();
                 $input.removeClass("form-input--success form-input--error");
                 $input.each(function(index, value){
-                    if ($.trim($input.eq(index).val()).length > 0) {
+                    if ($.trim($input.eq(index).val()).length > 0 && $checkbox.prop('checked') == true) {
                         $input.eq(index).addClass("form-input--success");
                     } else if ($.trim($input.eq(index).val()).length === 0) {
                         $input.eq(index).addClass("form-input--error");
-                        $input.eq(index).after('<div class="err-msg">This Field cannot left blank</div>');
+                        $input.eq(index).after('<div class="err-msg"></div>');
+                        $('.err-msg').text($errMsg);
                         $(".form-input--error:first").focus();
                         event.preventDefault(e);
-                    } 
+                    } else if ($checkbox.prop('checked') === false) {
+                        $checkboxErr.text($checkboxMsg);
+                        event.preventDefault(e);
+                    }
                 });
             });   
         },
