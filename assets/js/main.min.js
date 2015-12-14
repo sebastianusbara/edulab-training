@@ -17,8 +17,7 @@
         _jqueryui       : path.js + 'jquery-ui.custom.min.js',
         _fullcalendar   : path.js + 'fullcalendar.min.js',
         _lightbox       : path.js + 'lightbox.min.js',
-//         _googlemap      : 'https://maps.googleapis.com/maps/api/js?key=AIzaSyBiUgjizNVXDx-GO15JFYPf9hnZQssrpTI
-// &callback=initMap',
+        _googlemap      : 'https://maps.googleapis.com/maps/api/js?key=AIzaSyBiUgjizNVXDx-GO15JFYPf9hnZQssrpTI&callback=Site.initMap',
     };
 
     var Site = {
@@ -37,7 +36,7 @@
             Site.formValidation();
             Site.lightBox();
             Site.minatTabs();
-            // Site.kontakMap();
+            Site.kontakMap();
 
             window.Site = Site;
         },
@@ -109,7 +108,7 @@
             var $toggleMinat = $('.post__tabs li');
             var $postTabs = $('.post__tabs');
 
-            $toggleMinat.on( 'click', function() {
+            $toggleMinat.on ( 'click', function() {
                 $(this).parents($postTabs).find('.post__tabs__active').removeClass('post__tabs__active off-click');
                 $(this).addClass('post__tabs__active off-click');
                 $(this).parents($postTabs).siblings('.talent').toggleClass('show hidden');
@@ -197,26 +196,26 @@
         },
 
         formValidation: function () {
-            var $input          = $("form .form-input");
-            var $submit         = $("button:submit");
-            var $err            = $(".err-msg");
-            var $errMsg         = $(".form-input").attr('messages-data');
-            var $checkbox       = $("input[name='bimbingan']");
-            var $checkboxErr    = $(".err-opt");
-            var $checkboxMsg    = $(".err-opt").attr('messages-data');
+            var $input          = $('form .form-input');
+            var $submit         = $('button:submit');
+            var $err            = $('.err-msg');
+            var $errMsg         = $('.form-input').attr('messages-data');
+            var $checkbox       = $('input[name='bimbingan']');
+            var $checkboxErr    = $('.err-opt');
+            var $checkboxMsg    = $('.err-opt').attr('messages-data');
             
 
-            $submit.on( "click", function(e) {
-                $("form .err-msg").remove();
-                $input.removeClass("form-input--success form-input--error");
+            $submit.on ( 'click', function(e) {
+                $('form .err-msg').remove();
+                $input.removeClass('form-input--success form-input--error');
                 $input.each(function(index, value){
                     if ($.trim($input.eq(index).val()).length > 0 && $checkbox.prop('checked') === true) {
-                        $input.eq(index).addClass("form-input--success");
+                        $input.eq(index).addClass('form-input--success');
                     } else if ($.trim($input.eq(index).val()).length === 0) {
-                        $input.eq(index).addClass("form-input--error");
+                        $input.eq(index).addClass('form-input--error');
                         $input.eq(index).after('<div class="err-msg"></div>');
                         $('.err-msg').text($errMsg);
-                        $(".form-input--error:first").focus();
+                        $('.form-input--error:first').focus();
                         event.preventDefault(e);
                     } else if ($checkbox.prop('checked') === false) {
                         $checkboxErr.text($checkboxMsg);
@@ -227,31 +226,16 @@
         },
 
         boxBack: function() {
-            $('.box__back').on ('click', function() {
+            $('.box__back').on ( 'click', function() {
                 window.history.back();
             });
         },
 
-        // kontakMap: function () {
-        //     Modernizr.load({
-        //         load    : assets._googlemap,
-        //         complete: function () {
-        //             function initMap() {
-        //             var myLatLng = {lat: -6.914094, lng: 107.6141906};
-        //             var map = new google.maps.Map(document.getElementById('map'), {
-        //             zoom: 17,
-        //             center: myLatLng
-        //           });
-
-        //               var marker = new google.maps.Marker({
-        //                 position: myLatLng,
-        //                 map: map,
-        //                 title: 'Hello World!'
-        //               });
-        //             }
-        //         }
-        //     });
-        // },
+        kontakMap: function () {
+            Modernizr.load({
+                load    : assets._googlemap
+            });
+        },
 
         lightBox: function() {
             Modernizr.load({
@@ -263,6 +247,20 @@
                       'showImageNumberLabel': false,
                   })
                 }
+            });
+        },
+
+        initMap: function() {
+            var myLatLng = { lat: -6.914094, lng: 107.6141906};
+            var map = new google.maps.Map(document.getElementById('map'), {
+                zoom: 17,
+                center: myLatLng
+            });
+
+            var marker = new google.maps.Marker({
+                position: myLatLng,
+                map: map,
+                title: 'Hello World!'
             });
         }
     };
