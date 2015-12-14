@@ -16,7 +16,9 @@
         _moment         : path.js + 'moment.min.js',
         _jqueryui       : path.js + 'jquery-ui.custom.min.js',
         _fullcalendar   : path.js + 'fullcalendar.min.js',
-        _lightbox       : path.js + 'lightbox.min.js'       
+        _lightbox       : path.js + 'lightbox.min.js',
+//         _googlemap      : 'https://maps.googleapis.com/maps/api/js?key=AIzaSyBiUgjizNVXDx-GO15JFYPf9hnZQssrpTI
+// &callback=initMap',
     };
 
     var Site = {
@@ -35,7 +37,7 @@
             Site.formValidation();
             Site.lightBox();
             Site.minatTabs();
-            Site.kontakMap();
+            // Site.kontakMap();
 
             window.Site = Site;
         },
@@ -230,22 +232,26 @@
             });
         },
 
-        kontakMap: function() {
-            function initMap() {
-              var myLatLng = {lat: -6.914094, lng: 107.6141906};
+        // kontakMap: function () {
+        //     Modernizr.load({
+        //         load    : assets._googlemap,
+        //         complete: function () {
+        //             function initMap() {
+        //             var myLatLng = {lat: -6.914094, lng: 107.6141906};
+        //             var map = new google.maps.Map(document.getElementById('map'), {
+        //             zoom: 17,
+        //             center: myLatLng
+        //           });
 
-              var map = new google.maps.Map(document.getElementById('map'), {
-                zoom: 17,
-                center: myLatLng
-              });
-
-              var marker = new google.maps.Marker({
-                position: myLatLng,
-                map: map,
-                title: 'Hello World!'
-              });
-            }
-        },
+        //               var marker = new google.maps.Marker({
+        //                 position: myLatLng,
+        //                 map: map,
+        //                 title: 'Hello World!'
+        //               });
+        //             }
+        //         }
+        //     });
+        // },
 
         lightBox: function() {
             Modernizr.load({

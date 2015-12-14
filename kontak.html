@@ -184,8 +184,7 @@
     </div>
 </footer>
 </main>
-    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBiUgjizNVXDx-GO15JFYPf9hnZQssrpTI&callback=initMap">
-    </script>
+
     <div id="fb-root"></div>
     <script>
     (function(d, s, id) {
@@ -198,5 +197,23 @@
     </script>
     <script>window.myPrefix = '';</script>
     <script src="assets/js/main.min.js"></script>
+    <script type="text/javascript">
+        function initMap() {
+          var myLatLng = {lat: -6.914094, lng: 107.6141906};
+
+          var map = new google.maps.Map(document.getElementById('map'), {
+            zoom: 17,
+            center: myLatLng
+          });
+
+          var marker = new google.maps.Marker({
+            position: myLatLng,
+            map: map,
+            title: 'Hello World!'
+          });
+        }
+    </script>
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBiUgjizNVXDx-GO15JFYPf9hnZQssrpTI&callback=initMap">
+    </script>
 </body>
 </html>
