@@ -35,6 +35,7 @@
             Site.formValidation();
             Site.lightBox();
             Site.minatTabs();
+            Site.kontakMap();
 
             window.Site = Site;
         },
@@ -204,7 +205,7 @@
             
 
             $submit.on( "click", function(e) {
-                $(".register .err-msg").remove();
+                $("form .err-msg").remove();
                 $input.removeClass("form-input--success form-input--error");
                 $input.each(function(index, value){
                     if ($.trim($input.eq(index).val()).length > 0 && $checkbox.prop('checked') == true) {
@@ -227,6 +228,23 @@
             $('.box__back').on ('click', function() {
                 window.history.back();
             });
+        },
+
+        kontakMap: function() {
+            function initMap() {
+              var myLatLng = {lat: -6.914094, lng: 107.6141906};
+
+              var map = new google.maps.Map(document.getElementById('map'), {
+                zoom: 17,
+                center: myLatLng
+              });
+
+              var marker = new google.maps.Marker({
+                position: myLatLng,
+                map: map,
+                title: 'Hello World!'
+              });
+            }
         },
 
         lightBox: function() {
