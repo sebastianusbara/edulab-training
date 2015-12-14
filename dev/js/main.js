@@ -200,7 +200,7 @@
             var $submit         = $('button:submit');
             var $err            = $('.err-msg');
             var $errMsg         = $('.form-input').attr('messages-data');
-            var $checkbox       = $('input[name='bimbingan']');
+            var $checkbox       = $('input[name="bimbingan"]');
             var $checkboxErr    = $('.err-opt');
             var $checkboxMsg    = $('.err-opt').attr('messages-data');
             
