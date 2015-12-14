@@ -29,7 +29,6 @@
             Site.toggleButton();
             Site.toggleSubmenu();
             Site.toggleSidebar();
-            Site.buttonForm();
             Site.slickSlider();
             Site.fullCalendar();
             Site.boxBack();
@@ -112,15 +111,6 @@
                 $(this).addClass('post__tabs__active off-click');
                 $(this).parents('.post__tabs').siblings('.talent').toggleClass('show hidden');
                 $(this).parents('.post__tabs').siblings('.fingerprint').toggleClass('show hidden');
-            });
-        },
-
-        buttonForm: function () {
-            var $buttonForm     = $('.register .btn');
-            var $registerForm   = $('.register');
-
-                $registerForm.on ( 'click', '.btn', function() {
-                $(this).toggleClass('btn--active btn--deactive');
             });
         },
 
