@@ -70,7 +70,6 @@
             var $accordionIcon       = $('.fa');
             var $accordionHeader     = $('.accordion__header');
             
-
             $accordionHeader.on ( 'click', '.accordion__header__trigger' , function() {
                 $(this).parents('.accordion').find('.accordion__content').toggleClass('show hidden');
                 $(this).find($accordionIcon).toggleClass('fa-chevron-down fa-chevron-up');
@@ -245,7 +244,7 @@
                       'resizeDuration': 200,
                       'wrapAround': true,
                       'showImageNumberLabel': false,
-                  })
+                  });
                 }
             });
         },
