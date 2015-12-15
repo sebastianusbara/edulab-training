@@ -7418,7 +7418,7 @@ a:hover, a:focus {
   margin-bottom: 10px;
 }
 
-#map {
+.gmap {
   height: 350px;
   background: white;
   width: 100%;

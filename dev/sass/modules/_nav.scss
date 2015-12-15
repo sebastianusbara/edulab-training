@@ -39,6 +39,7 @@
 	text-align: left;
 	height: 50px;
 	margin-top: -50px;
+	
 	@media #{$large} {
 		margin-top: -10px;
 		height: auto;
@@ -49,6 +50,7 @@
 
 .nav__header img {
 	max-height: 30px;
+	
 	@media #{$large} {
 	    max-height: 100px;
    	}
@@ -119,6 +121,7 @@
 	background: white;
 	padding: 0;
 	margin: 0;
+	
 	@media #{$large}{
 		position: absolute;
 		top: 0;
@@ -162,6 +165,7 @@
 
 .nav__menu-list:hover > .nav__submenu {
 	display: none;
+	
 	@media #{$large} {
 		display: block!important;
 	}
@@ -189,6 +193,7 @@
 
 .main__toggle {
 	display: none;
+	
 	@media #{$large} {
 		position: fixed;
 		display: inline-block;
@@ -213,6 +218,7 @@
 
 .fa-mob {
 	display: inline-block;
+	
 	@media #{$large} {
 		display: none!important;
 	}
@@ -220,6 +226,7 @@
 
 .fa-desk {
 	display: none!important;
+	
 	@media #{$large} {
 		display: inline-block!important;
 	}
@@ -235,6 +242,7 @@
 	border-left: none;
 	background: inherit;
 	padding-left: 15px;
+	
 	&:hover {
 		background: $yellow-light;
 	}
@@ -242,6 +250,7 @@
 
 .logo-desk {
 	display: none;
+	
 	@media #{$large} {
 		display: block;
 	}
@@ -251,6 +260,7 @@
 	max-width: 75%;
 	display: inline-block;
 	float: left;
+	
 	@media #{$large} {
 		display: none!important;
 	}
