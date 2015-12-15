@@ -47,7 +47,7 @@
 }
 
 .hidden {
-    display: none !important;
+    display: none;
 }
 
 .show {
@@ -57,7 +57,7 @@
 .show2 {
     display: block!important;
     @media #{$large} {
-    display: none !important;
+    display: none!important;
     }
 }
 

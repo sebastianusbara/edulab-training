@@ -364,7 +364,7 @@ input[type="search"] {
 }
 
 .hidden {
-  display: none !important;
+  display: none;
 }
 
 .show {
@@ -1705,12 +1705,6 @@ input[type="number"] {
   width: 100%;
 }
 
-@media screen and (max-width: 50em) {
-  .nav {
-    display: block !important;
-  }
-}
-
 @media screen and (min-width: 60em) {
   .nav {
     width: 230px;
@@ -1877,13 +1871,13 @@ input[type="number"] {
   padding: 15px 15px;
 }
 
-.nav__menu-list:hover > .nav__submenu {
+nav .nav__menu-list:hover > .nav__submenu {
   display: none;
 }
 
 @media screen and (min-width: 60em) {
-  .nav__menu-list:hover > .nav__submenu {
-    display: block !important;
+  nav .nav__menu-list:hover > .nav__submenu {
+    display: block;
   }
 }
 
@@ -1936,23 +1930,23 @@ input[type="number"] {
   left: -25px;
 }
 
-.fa-mob {
+span.fa-mob {
   display: inline-block;
 }
 
 @media screen and (min-width: 60em) {
-  .fa-mob {
-    display: none !important;
+  span.fa-mob {
+    display: none;
   }
 }
 
-.fa-desk {
-  display: none !important;
+span.fa-desk {
+  display: none;
 }
 
 @media screen and (min-width: 60em) {
-  .fa-desk {
-    display: inline-block !important;
+  span.fa-desk {
+    display: inline-block;
   }
 }
 
@@ -1990,7 +1984,7 @@ input[type="number"] {
 
 @media screen and (min-width: 60em) {
   .logo-mob {
-    display: none !important;
+    display: none;
   }
 }
 
