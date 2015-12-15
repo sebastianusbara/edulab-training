@@ -234,6 +234,7 @@ a {
 }
 
 .post__summary {
+    position: relative;
     padding-right: 0;
     margin-bottom: 40px;
     @media #{$medium} {
@@ -245,6 +246,7 @@ a {
 .post__summary__header {
     position: relative;
     font-size: 11px;
+    padding-bottom: 2px;
     &:after {
         position: absolute;
         bottom: 0;
@@ -297,6 +299,21 @@ a {
         @media #{$large} {
             margin-bottom: 10px;
         }
+}
+
+.post__link {
+    position: absolute;
+    right: 0;
+    top: -4px;
+    color: $black80;
+    font-size: 12px;
+    &:hover {
+        color: $link_hover;
+    }
+    @media #{$large} {
+        right: 30px;
+        font-size: 14px;
+    }
 }
 
 .gallery {

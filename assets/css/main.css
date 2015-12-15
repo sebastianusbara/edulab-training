@@ -6599,6 +6599,7 @@ a:hover, a:focus {
 }
 
 .post__summary {
+  position: relative;
   padding-right: 0;
   margin-bottom: 40px;
 }
@@ -6613,6 +6614,7 @@ a:hover, a:focus {
 .post__summary__header {
   position: relative;
   font-size: 11px;
+  padding-bottom: 2px;
 }
 
 .post__summary__header:after {
@@ -6678,6 +6680,25 @@ a:hover, a:focus {
 @media screen and (min-width: 60em) {
   .post__thumb {
     margin-bottom: 10px;
+  }
+}
+
+.post__link {
+  position: absolute;
+  right: 0;
+  top: -4px;
+  color: #555555;
+  font-size: 12px;
+}
+
+.post__link:hover {
+  color: #0074ba;
+}
+
+@media screen and (min-width: 60em) {
+  .post__link {
+    right: 30px;
+    font-size: 14px;
   }
 }
 
