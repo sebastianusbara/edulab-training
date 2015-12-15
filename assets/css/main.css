@@ -1851,6 +1851,15 @@ input[type="number"] {
   }
 }
 
+@media screen and (min-width: 60em) {
+  .nav__submenu-list:first-child:hover {
+    position: relative;
+  }
+  .nav__submenu-list:first-child:hover:before {
+    border-color: transparent #ffdf3c transparent transparent;
+  }
+}
+
 .nav__submenu-list:last-child {
   border-bottom: none;
 }

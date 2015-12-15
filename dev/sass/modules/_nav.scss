@@ -147,6 +147,15 @@
 			}
 		}
 	}
+	
+	&:first-child:hover {
+		@media #{$large} {
+		position: relative;
+		&:before {
+			border-color: transparent $yellow-light transparent transparent;
+			}
+		}
+	}
 
 	&:last-child {
 		border-bottom: none;
