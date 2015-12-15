@@ -6649,13 +6649,12 @@ a:hover, a:focus {
 
 .post__summary__title, .post__summary__date {
   margin: 0;
-  text-align: center;
+  text-align: left;
+  color: #555555;
 }
 
-@media screen and (min-width: 48em) {
-  .post__summary__title, .post__summary__date {
-    text-align: left;
-  }
+.post__summary__title:hover {
+  color: #0074ba;
 }
 
 .post__thumb {
@@ -6663,7 +6662,11 @@ a:hover, a:focus {
   display: block;
   margin: 0 auto;
   text-align: center;
-  padding: 0 20px 20px 0;
+  padding: 10px;
+}
+
+.post__thumb img {
+  width: 100%;
 }
 
 @media screen and (min-width: 48em) {

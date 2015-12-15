@@ -274,10 +274,12 @@ a {
 
 .post__summary__title, .post__summary__date {
     margin: 0;
-    text-align: center;
-    @media #{$medium} {
-        text-align: left;
-    }
+    text-align: left;
+    color: $black80;
+}
+
+.post__summary__title:hover {
+    color: $link_hover;
 }
 
 .post__thumb {
@@ -285,7 +287,10 @@ a {
     display: block;
     margin: 0 auto;
     text-align: center;
-    padding: 0 20px 20px 0;
+    padding: 10px;
+    img {
+        width: 100%;
+    }
         @media #{$medium} {
             float: left;
         }
