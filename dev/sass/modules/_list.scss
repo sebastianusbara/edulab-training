@@ -1,5 +1,6 @@
 .yellow-list {
     margin-left: 0px;
+    
     @media #{$medium} {
         margin-left: 10px;
     }
@@ -8,6 +9,7 @@
 .yellow-list li {
     position: relative;
     padding-left: 30px;
+    
     &:before {
         position: absolute;
         left: 0;

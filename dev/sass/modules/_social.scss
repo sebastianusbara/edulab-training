@@ -6,6 +6,7 @@
 	color: $black80;
 	border-bottom: 1px solid $black60;
 	font-size: 13px;
+	
 	@media #{$large}{
 		display: block;
 	}
@@ -32,6 +33,7 @@
 .social-icon__list {
 	display: inline-block;
 	margin-right: 5px;
+	
 	a {
 		height: 30px;
 		width: 30px;

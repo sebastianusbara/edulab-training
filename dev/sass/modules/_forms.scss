@@ -49,9 +49,11 @@ input[type="number"] {
     padding: 0;
     position: relative;
     top: 7px;
+    
     &:after {
         display: none;
     }
+    
     @media #{$large} {
         &:after {
             display: inline-block;

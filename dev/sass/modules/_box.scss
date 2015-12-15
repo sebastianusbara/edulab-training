@@ -1,8 +1,10 @@
 .box {
 	background: white;
+	
 	img {
 		object-fit: cover;
 	}
+	
 	a {
 		color: $black;
 	}
@@ -51,6 +53,7 @@
 .box--detail {
 	border: 1px $black30 solid;
 	padding: 10px;
+	
 	h3 {
 		margin: 0;
 	}
@@ -137,12 +140,15 @@
 	height: 40px;
 	width: 40px;
 	font-size: 28px;
+	
 	&:focus {
 		outline: 0;
 	}
+	
 	&:hover {
 		background: whitesmoke;
 	}
+	
 	span {
 		color: maroon;
 	}
