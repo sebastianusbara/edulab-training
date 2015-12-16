@@ -6622,8 +6622,8 @@ a:hover, a:focus {
 
 .post__summary__header {
   position: relative;
-  font-size: 11px;
-  padding-bottom: 2px;
+  font-size: 14px;
+  padding-bottom: 10px;
 }
 
 .post__summary__header:after {
